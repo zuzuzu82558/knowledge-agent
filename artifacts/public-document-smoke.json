@@ -1,0 +1,440 @@
+{
+  "source": "RFC 9110",
+  "mode": "offline",
+  "status": "passed",
+  "max_chunks": 3000,
+  "note": "2168 chunks exceeds default limit 2000; explicit bounded override used. No model quality verified.",
+  "queries": [
+    {
+      "question": "Content-Length 204",
+      "status": "offline_extracts",
+      "evidence": [
+        {
+          "locations": [
+            {
+              "line_start": 3238,
+              "line_end": 3241
+            }
+          ],
+          "headings": [],
+          "block": 609,
+          "text": "   A server MUST NOT send a Content-Length header field in any response\n   with a status code of 1xx (Informational) or 204 (No Content).  A\n   server MUST NOT send a Content-Length header field in any 2xx\n   (Successful) response to a CONNECT request (Section 9.3.6).",
+          "offset": 0,
+          "id": "6235f0cc-6e4b-562f-bf22-eaed7e182aa0",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 6944,
+              "line_end": 6951
+            }
+          ],
+          "headings": [],
+          "block": 1408,
+          "text": "   Aside from responses to CONNECT, a 200 response is expected to\n   contain message content unless the message framing explicitly\n   indicates that the content has zero length.  If some aspect of the\n   request indicates a preference for no content upon success, the\n   origin server ought to send a 204 (No Content) response instead.  For\n   CONNECT, there is no content because the successful result is a\n   tunnel, which begins immediately after the 200 response header\n   section.",
+          "offset": 0,
+          "id": "5385a67c-3228-5606-a657-dc294bbf4961",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 3203,
+              "line_end": 3210
+            }
+          ],
+          "headings": [],
+          "block": 602,
+          "text": "   The \"Content-Length\" header field indicates the associated\n   representation's data length as a decimal non-negative integer number\n   of octets.  When transferring a representation as content, Content-\n   Length refers specifically to the amount of data enclosed so that it\n   can be used to delimit framing (e.g., Section 6.2 of [HTTP/1.1]).  In\n   other cases, Content-Length indicates the selected representation's\n   current length, which can be used by recipients to estimate transfer\n   time or to compare with previously stored representations.",
+          "offset": 0,
+          "id": "136913d3-f8a2-5610-ba15-da6d776b478f",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 8742,
+              "line_end": 8750
+            }
+          ],
+          "headings": [],
+          "block": 1792,
+          "text": "   In CGI, a received Content-Length field would be passed as the meta-\n   variable \"CONTENT_LENGTH\" with a string value matching the received\n   field's value.  In contrast, a received \"Content_Length\" header field\n   would be passed as the protocol-specific meta-variable\n   \"HTTP_CONTENT_LENGTH\", which might lead to some confusion if an\n   application mistakenly reads the protocol-specific meta-variable\n   instead of the default one.  (This historical practice is why\n   Section 16.3.2.1 discourages the creation of new field names that\n   contain an underscore.)",
+          "offset": 0,
+          "id": "bcb91297-44fa-50f3-9f71-b9f52101ba34",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 3218,
+              "line_end": 3224
+            }
+          ],
+          "headings": [],
+          "block": 606,
+          "text": "   A user agent SHOULD send Content-Length in a request when the method\n   defines a meaning for enclosed content and it is not sending\n   Transfer-Encoding.  For example, a user agent normally sends Content-\n   Length in a POST request even when the value is 0 (indicating empty\n   content).  A user agent SHOULD NOT send a Content-Length header field\n   when the request message does not contain content and the method\n   semantics do not anticipate such data.",
+          "offset": 0,
+          "id": "ded45aa1-b948-5dce-8278-62d02f340c9d",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 7692,
+              "line_end": 7696
+            }
+          ],
+          "headings": [],
+          "block": 1556,
+          "text": "   content.",
+          "offset": 0,
+          "id": "5eb04db7-c8b5-5a06-81e2-3fb02d334578",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7",
+          "excerpt": {
+            "start": 273,
+            "end": 284,
+            "unit": "chunk_text_characters"
+          }
+        },
+        {
+          "locations": [
+            {
+              "line_start": 3267,
+              "line_end": 3274
+            }
+          ],
+          "headings": [],
+          "block": 614,
+          "text": "   Likewise, a sender MUST NOT forward a message with a Content-Length\n",
+          "offset": 0,
+          "id": "e233fd64-c313-5292-82df-9e90273811bc",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7",
+          "excerpt": {
+            "start": 0,
+            "end": 71,
+            "unit": "chunk_text_characters"
+          }
+        }
+      ],
+      "snapshot": {
+        "documents": [
+          "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        ],
+        "generations": [
+          "f7675368-b69d-5015-ba97-1e8636ccff77"
+        ],
+        "versions": [
+          "c8d54805-f6a1-56be-975a-294785a8d94f"
+        ],
+        "corpus_revision": 1,
+        "collection": "knowledge_m1_b6f0ae0cd70a91ee",
+        "contract": {
+          "parser": "m1-v2-level-stack-table-cells",
+          "chunker": "section-900-v2-bounded-table",
+          "sparse": "jieba-0.42.1-bm25-k1=1.5-b=0-qdrant-idf-v1",
+          "mode": "offline",
+          "embedding": "openai/text-embedding-3-small",
+          "revision": "provider-default",
+          "dimension": 1536,
+          "distance": "Cosine",
+          "normalization": "qdrant-cosine",
+          "endpoint": null
+        },
+        "idf_scope": "whole_collection_including_retained_and_partial_generations"
+      }
+    },
+    {
+      "question": "safe idempotent methods GET HEAD OPTIONS TRACE",
+      "status": "offline_extracts",
+      "evidence": [
+        {
+          "locations": [
+            {
+              "line_start": 73,
+              "line_end": 378
+            }
+          ],
+          "headings": [],
+          "block": 14,
+          "text": "Codings\n         8.4.1.1.  Compress Coding\n         8.4.1.2.  Deflate Coding\n         8.4.1.3.  Gzip Coding\n     8.5.  Content-Language\n       8.5.1.  Language Tags\n     8.6.  Content-Length\n     8.7.  Content-Location\n     8.8.  Validator Fields\n       8.8.1.  Weak versus Strong\n       8.8.2.  Last-Modified\n         8.8.2.1.  Generation\n         8.8.2.2.  Comparison\n       8.8.3.  ETag\n         8.8.3.1.  Generation\n         8.8.3.2.  Comparison\n         8.8.3.3.  Example: Entity Tags Varying on Content-Negotiated\n                 Resources\n   9.  Methods\n     9.1.  Overview\n     9.2.  Common Method Properties\n       9.2.1.  Safe Methods\n       9.2.2.  Idempotent Methods\n       9.2.3.  Methods and Caching\n     9.3.  Method Definitions\n       9.3.1.  GET\n       9.3.2.  HEAD\n       9.3.3.  POST\n       9.3.4.  PUT\n       9.3.5.  DELETE\n       9.3.6.  CONNECT\n       9.3.7.  OPTIONS\n       9.",
+          "offset": 2700,
+          "id": "a5cc26b7-be8e-52e3-ad8a-0923128c9377",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 3834,
+              "line_end": 3835
+            }
+          ],
+          "headings": [],
+          "block": 719,
+          "text": "   Of the request methods defined by this specification, the GET, HEAD,\n   OPTIONS, and TRACE methods are defined to be safe.",
+          "offset": 0,
+          "id": "02583f29-1bbc-5fa4-92e0-c9f1ba4b203b",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 8987,
+              "line_end": 9007
+            }
+          ],
+          "headings": [],
+          "block": 1833,
+          "text": "                 +=========+======+============+=========+\n                 | Method  | Safe | Idempotent | Section |\n                 +=========+======+============+=========+\n                 | CONNECT | no   | no         | 9.3.6   |\n                 +---------+------+------------+---------+\n                 | DELETE  | no   | yes        | 9.3.5   |\n                 +---------+------+------------+---------+\n                 | GET     | yes  | yes        | 9.3.1   |\n                 +---------+------+------------+---------+\n                 | HEAD    | yes  | yes        | 9.3.2   |\n                 +---------+------+------------+---------+\n                 | OPTIONS | yes  | yes        | 9.3.7   |\n                 +---------+------+------------+---------+\n                 | POST    | no   | no         | 9.3.3   |\n                 +---------+------+------------+---------+\n               ",
+          "offset": 0,
+          "id": "a6e1fe1c-6178-57e8-8b8e-128cb7e2872f",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 3863,
+              "line_end": 3867
+            }
+          ],
+          "headings": [],
+          "block": 724,
+          "text": "   A request method is considered \"idempotent\" if the intended effect on\n   the server of multiple identical requests with that method is the\n   same as the effect for a single such request.  Of the request methods\n   defined by this specification, PUT, DELETE, and safe request methods\n   are idempotent.",
+          "offset": 0,
+          "id": "1110fd46-48f2-56fa-8d5f-e19c1fed35f8",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 10631,
+              "line_end": 10651
+            }
+          ],
+          "headings": [],
+          "block": 2096,
+          "text": "         Max-Forwards header field  *_Section 7.6.2_*\n         Media Type\n            multipart/byteranges  *_Section 14.6_*\n            multipart/x-byteranges  Section 14.6, Paragraph 4, Item 3\n         message  Section 3.4; *_Section 6_*\n         message abstraction  *_Section 6_*\n         messages  *_Section 3.4_*\n",
+          "offset": 0,
+          "id": "d17444d9-c9b3-558c-96dc-e96b16b1a35f",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7",
+          "excerpt": {
+            "start": 0,
+            "end": 319,
+            "unit": "chunk_text_characters"
+          }
+        }
+      ],
+      "snapshot": {
+        "documents": [
+          "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        ],
+        "generations": [
+          "f7675368-b69d-5015-ba97-1e8636ccff77"
+        ],
+        "versions": [
+          "c8d54805-f6a1-56be-975a-294785a8d94f"
+        ],
+        "corpus_revision": 1,
+        "collection": "knowledge_m1_b6f0ae0cd70a91ee",
+        "contract": {
+          "parser": "m1-v2-level-stack-table-cells",
+          "chunker": "section-900-v2-bounded-table",
+          "sparse": "jieba-0.42.1-bm25-k1=1.5-b=0-qdrant-idf-v1",
+          "mode": "offline",
+          "embedding": "openai/text-embedding-3-small",
+          "revision": "provider-default",
+          "dimension": 1536,
+          "distance": "Cosine",
+          "normalization": "qdrant-cosine",
+          "endpoint": null
+        },
+        "idf_scope": "whole_collection_including_retained_and_partial_generations"
+      }
+    },
+    {
+      "question": "Retry-After HTTP-date delay-seconds",
+      "status": "offline_extracts",
+      "evidence": [
+        {
+          "locations": [
+            {
+              "line_start": 4809,
+              "line_end": 4810
+            }
+          ],
+          "headings": [],
+          "block": 908,
+          "text": "   The Retry-After field value can be either an HTTP-date or a number of\n   seconds to delay after receiving the response.",
+          "offset": 0,
+          "id": "cdcbd930-1cee-5a86-88de-615b9e419680",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 4812,
+              "line_end": 4812
+            }
+          ],
+          "headings": [],
+          "block": 909,
+          "text": "     Retry-After = HTTP-date / delay-seconds",
+          "offset": 0,
+          "id": "3d600826-559b-5340-9abc-74996a2afe5d",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 9809,
+              "line_end": 9812
+            }
+          ],
+          "headings": [],
+          "block": 1981,
+          "text": "   RWS = 1*( SP / HTAB )\n   Range = ranges-specifier\n   Referer = absolute-URI / partial-URI\n   Retry-After = HTTP-date / delay-seconds",
+          "offset": 0,
+          "id": "fd01895a-08fa-586d-8128-3fb174a2cd79",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 7888,
+              "line_end": 7893
+            }
+          ],
+          "headings": [],
+          "block": 1603,
+          "text": "   The 503 (Service Unavailable) status code indicates that the server\n   is currently unable to handle the request due to a temporary overload\n   or scheduled maintenance, which will likely be alleviated after some\n   delay.  The server MAY send a Retry-After header field\n   (Section 10.2.3) to suggest an appropriate amount of time for the\n   client to wait before retrying the request.",
+          "offset": 0,
+          "id": "c5bdcd0e-a12e-5f1a-9960-a81f167ccaa3",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 10405,
+              "line_end": 10556
+            }
+          ],
+          "headings": [],
+          "block": 2088,
+          "text": "es  *_Section 14.3_*\n            asctime-date  *_Section 5.6.7_*\n            auth-param  *_Section 11.2_*\n            auth-scheme  *_Section 11.1_*\n            authority  *_Section 4.1_*\n            challenge  *_Section 11.3_*\n            codings  *_Section 12.5.3_*\n            comment  *_Section 5.6.5_*\n            complete-length  *_Section 14.4_*\n            connection-option  *_Section 7.6.1_*\n            content-coding  *_Section 8.4.1_*\n            credentials  *_Section 11.4_*\n            ctext  *_Section 5.6.5_*\n            date1  *_Section 5.6.7_*\n            day  *_Section 5.6.7_*\n            day-name  *_Section 5.6.7_*\n            day-name-l  *_Section 5.6.7_*\n            delay-seconds  *_Section 10.2.3_*\n            entity-tag  *_Section 8.8.3_*\n            etagc  *_Section 8.8.3_*\n            field-content  *_Section 5.5_*\n            field-name  *_Section 5.1_*; Section 6.6",
+          "offset": 2700,
+          "id": "f8a9980c-a641-5148-aad0-0e51a51095b6",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 4801,
+              "line_end": 4807
+            }
+          ],
+          "headings": [],
+          "block": 907,
+          "text": "   Servers send the \"Retry-After\" header field to indicate how long the\n   user agent ought to wait before making a follow-up request.  When\n   sent with a 503 (Service Unavailable) response, Retry-After indicates\n   how long the service is expected to be unavailable to the client.\n   When sent with any 3xx (Redirection) response, Retry-After indicates\n   the minimum time that the user agent is asked to wait before issuing\n   the redirected request.",
+          "offset": 0,
+          "id": "a481597b-2c9b-5ec2-bafa-3566e064a753",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 4814,
+              "line_end": 4815
+            }
+          ],
+          "headings": [],
+          "block": 910,
+          "text": "   A delay-seconds value is a non-negative decimal integer, representing\n   time in seconds.",
+          "offset": 0,
+          "id": "d8704a48-724a-598a-a672-5cf5e101f305",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        },
+        {
+          "locations": [
+            {
+              "line_start": 4821,
+              "line_end": 4822
+            }
+          ],
+          "headings": [],
+          "block": 913,
+          "text": "   Retry-After: Fri, 31 Dec 1999 23:59:59 GMT\n   Retry-After: 120",
+          "offset": 0,
+          "id": "f8ecc5ac-e393-5156-bafb-030ae27f4a40",
+          "generation": "f7675368-b69d-5015-ba97-1e8636ccff77",
+          "version": "c8d54805-f6a1-56be-975a-294785a8d94f",
+          "document": "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        }
+      ],
+      "snapshot": {
+        "documents": [
+          "497ad8b8-f89e-4e3c-9fe8-bda1a362acf7"
+        ],
+        "generations": [
+          "f7675368-b69d-5015-ba97-1e8636ccff77"
+        ],
+        "versions": [
+          "c8d54805-f6a1-56be-975a-294785a8d94f"
+        ],
+        "corpus_revision": 1,
+        "collection": "knowledge_m1_b6f0ae0cd70a91ee",
+        "contract": {
+          "parser": "m1-v2-level-stack-table-cells",
+          "chunker": "section-900-v2-bounded-table",
+          "sparse": "jieba-0.42.1-bm25-k1=1.5-b=0-qdrant-idf-v1",
+          "mode": "offline",
+          "embedding": "openai/text-embedding-3-small",
+          "revision": "provider-default",
+          "dimension": 1536,
+          "distance": "Cosine",
+          "normalization": "qdrant-cosine",
+          "endpoint": null
+        },
+        "idf_scope": "whole_collection_including_retained_and_partial_generations"
+      }
+    }
+  ]
+}

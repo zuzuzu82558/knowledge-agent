@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-11",
+  "timezone": "Asia/Shanghai",
+  "application_python_sha256": "d6c830b90c3db72fdbefcda37e0526a43d1199e3d5a35bb899b109061c674569",
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "130",
+    "time": "43.406",
+    "timestamp": "2026-10-11T15:30:27.597140+08:00",
+    "hostname": "LAPTOP-4F1ELRIB"
+  },
+  "browser_checks": 11,
+  "browser_status": "passed",
+  "http_checks": {
+    "mode": "offline",
+    "real_server_process": true,
+    "checks": [
+      "health",
+      "ui",
+      "ingest",
+      "query",
+      "citations",
+      "cache",
+      "full_document_coverage",
+      "delete"
+    ],
+    "status": "passed"
+  },
+  "rag_comparison": {
+    "questions": 30,
+    "runs": 180,
+    "statuses": {
+      "dense_unavailable": 60,
+      "offline_extracts": 120
+    },
+    "graph_gain": null,
+    "ragas_quality_conclusion": null
+  },
+  "online_runs": 9,
+  "online_agent_runs": "not_run_offline",
+  "real_models_search_judge_validated": false,
+  "human_review": "pending",
+  "source_review": "docs/GOLDEN_REVIEW_20261011.md",
+  "business_data_modified_by_task": false,
+  "port_8000_restarted_by_task": false,
+  "pending": [
+    "model_and_search_credentials",
+    "approved_fee_budget",
+    "real_service_acceptance",
+    "independent_human_semantic_labels"
+  ],
+  "notes": [
+    "Synthetic fixtures and byte guards do not establish semantic accuracy.",
+    "No gains, real judge scores or provider cost were invented."
+  ]
+}

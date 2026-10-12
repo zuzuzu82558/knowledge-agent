@@ -1,0 +1,75 @@
+{
+  "kind": "offline_synthetic_boundary_probes",
+  "network_calls": 0,
+  "model_quality_validated": false,
+  "embedding": [
+    {
+      "chunks": 1280,
+      "calls": 40,
+      "status": "completed",
+      "vectors": 1280
+    },
+    {
+      "chunks": 1281,
+      "calls": 40,
+      "status": "failed",
+      "error": "TimeoutError",
+      "reason": "request_call_or_time_budget_exhausted"
+    }
+  ],
+  "summary_budget": {
+    "successful_chunk_calls": 40,
+    "next_aggregate_call": "request_call_or_time_budget_exhausted",
+    "scope": "CallBudget boundary, not end-to-end summary quality"
+  },
+  "context": {
+    "candidate_count": 8,
+    "characters_per_candidate": 900,
+    "selected_count": 2,
+    "full_chunks": 1,
+    "excerpt_chunks": 1,
+    "status": "selected",
+    "budget": 3000,
+    "used": 2992,
+    "decisions": [
+      {
+        "id": "0",
+        "selection": "selected"
+      },
+      {
+        "id": "1",
+        "selection": "excerpt",
+        "excerpt": {
+          "start": 0,
+          "end": 70,
+          "unit": "chunk_text_characters"
+        }
+      },
+      {
+        "id": "2",
+        "selection": "context_budget"
+      },
+      {
+        "id": "3",
+        "selection": "context_budget"
+      },
+      {
+        "id": "4",
+        "selection": "context_budget"
+      },
+      {
+        "id": "5",
+        "selection": "context_budget"
+      },
+      {
+        "id": "6",
+        "selection": "context_budget"
+      },
+      {
+        "id": "7",
+        "selection": "context_budget"
+      }
+    ],
+    "method": "model_evidence_JSON_UTF8_bytes_v2"
+  }
+}

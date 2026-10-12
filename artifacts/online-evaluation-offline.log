@@ -1,0 +1,23 @@
+{"event": "ingest_start", "job_id": "fa0f36c6-93a4-4fcb-80ac-4ce57c671445", "generation": "345b0f1a-95fd-581c-a6b5-70cad7623e5c"}
+{"event": "parse", "job_id": "fa0f36c6-93a4-4fcb-80ac-4ce57c671445", "generation": "345b0f1a-95fd-581c-a6b5-70cad7623e5c", "elapsed_ms": 328, "timing": "measured_operation_retrospective_export"}
+{"event": "index", "job_id": "fa0f36c6-93a4-4fcb-80ac-4ce57c671445", "generation": "345b0f1a-95fd-581c-a6b5-70cad7623e5c", "elapsed_ms": 172, "timing": "measured_operation_retrospective_export"}
+{"event": "ingest_complete", "job_id": "fa0f36c6-93a4-4fcb-80ac-4ce57c671445", "generation": "345b0f1a-95fd-581c-a6b5-70cad7623e5c", "chunks": 23, "elapsed_ms": 1281, "usage": []}
+{"event": "retrieval", "run_id": "3779077f-3930-4b56-8984-8cf32d5f816c", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "context_selection", "run_id": "3779077f-3930-4b56-8984-8cf32d5f816c", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "query_complete", "run_id": "3779077f-3930-4b56-8984-8cf32d5f816c", "request_id": null, "status": "offline_extracts", "elapsed_ms": 0, "steps": ["固定文档版本/索引代次/语料修订号", "独立召回", "RRF 融合", "引用范围与上下文预算检查"], "usage": []}
+{"event": "retrieval", "run_id": "d9d7688d-f8ae-40f5-b560-a96b526dcd08", "elapsed_ms": 15, "timing": "measured_operation_retrospective_export"}
+{"event": "context_selection", "run_id": "d9d7688d-f8ae-40f5-b560-a96b526dcd08", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "query_complete", "run_id": "d9d7688d-f8ae-40f5-b560-a96b526dcd08", "request_id": null, "status": "offline_extracts", "elapsed_ms": 15, "steps": ["固定文档版本/索引代次/语料修订号", "独立召回", "RRF 融合", "引用范围与上下文预算检查"], "usage": []}
+{"event": "retrieval", "run_id": "1963f457-c332-4aca-9ec7-4246001093d7", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "context_selection", "run_id": "1963f457-c332-4aca-9ec7-4246001093d7", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "query_complete", "run_id": "1963f457-c332-4aca-9ec7-4246001093d7", "request_id": null, "status": "offline_extracts", "elapsed_ms": 0, "steps": ["固定文档版本/索引代次/语料修订号", "独立召回", "RRF 融合", "引用范围与上下文预算检查"], "usage": []}
+{"event": "retrieval", "run_id": "1d873ef9-24c6-40b5-b230-96c4e97c16f7", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "context_selection", "run_id": "1d873ef9-24c6-40b5-b230-96c4e97c16f7", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "query_complete", "run_id": "1d873ef9-24c6-40b5-b230-96c4e97c16f7", "request_id": null, "status": "offline_extracts", "elapsed_ms": 0, "steps": ["固定文档版本/索引代次/语料修订号", "独立召回", "RRF 融合", "引用范围与上下文预算检查"], "usage": []}
+{"event": "retrieval", "run_id": "33a3d884-ef31-4c72-8bdd-43ff4b08d6af", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "context_selection", "run_id": "33a3d884-ef31-4c72-8bdd-43ff4b08d6af", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "query_complete", "run_id": "33a3d884-ef31-4c72-8bdd-43ff4b08d6af", "request_id": null, "status": "offline_extracts", "elapsed_ms": 0, "steps": ["固定文档版本/索引代次/语料修订号", "独立召回", "RRF 融合", "引用范围与上下文预算检查"], "usage": []}
+{"event": "retrieval", "run_id": "a836475f-a716-4820-b45b-4c1f3e4d2bb1", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "context_selection", "run_id": "a836475f-a716-4820-b45b-4c1f3e4d2bb1", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "query_complete", "run_id": "a836475f-a716-4820-b45b-4c1f3e4d2bb1", "request_id": null, "status": "offline_extracts", "elapsed_ms": 0, "steps": ["固定文档版本/索引代次/语料修订号", "独立召回", "RRF 融合", "引用范围与上下文预算检查"], "usage": []}
+{"status": "completed_with_pending_semantic_and_human_review", "runs": 9, "real_quality_validated": false}

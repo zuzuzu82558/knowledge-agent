@@ -1,0 +1,176 @@
+{
+  "source_run": "11384483-011e-4fab-8d16-02c52f68d55b",
+  "network_calls": 0,
+  "model_calls": 0,
+  "semantic_quality": "not_evaluated",
+  "comparisons": [
+    {
+      "budget": 3000,
+      "balanced": false,
+      "selected_pages": 1,
+      "context": {
+        "status": "selected",
+        "unit": "UTF8_bytes",
+        "budget": 3000,
+        "used": 2971,
+        "candidate_count": 3,
+        "decisions": [
+          {
+            "id": "web:1bd6aedea756d8ac5a90c90b919360a9cc40082d7cd2b1fcf459ab8ea34654ee",
+            "selection": "excerpt",
+            "reason": "full_evidence_exceeds_bytes",
+            "excerpt": {
+              "start": 3399,
+              "end": 4845,
+              "unit": "chunk_text_characters"
+            }
+          },
+          {
+            "id": "web:5a1975fcbe5df2d6ad8bb553a0914e7a9fc918bd0ae4325a154e94f4390451bd",
+            "selection": "context_budget",
+            "reason": "minimum_excerpt_exceeds_bytes"
+          },
+          {
+            "id": "web:d6682fb5c36f41e41003140e07100ff9766dce1cbbb166971c3a7b6e25f38eeb",
+            "selection": "context_budget",
+            "reason": "minimum_excerpt_exceeds_bytes"
+          }
+        ],
+        "allocation": "rank_order_greedy_v1",
+        "method": "model_evidence_JSON_UTF8_bytes_v2"
+      },
+      "excerpts": [
+        {
+          "url": "https://juejin.cn/post/7488960073655631883",
+          "text_preview": "问题1：如何在依赖项中访问请求头信息？\nA) 直接从路由参数获取\nB) 通过\nRequest\n对象依赖\nC) 使用\nHeader\n参数声明\n答案：B和C都正确\n解析：两种合法方式：\n# 方法1：通过Request对象\ndef\nget_ua\n(\nrequest: Request\n):\nreturn\nrequest.headers.get(\n\"user-agen"
+        }
+      ]
+    },
+    {
+      "budget": 3000,
+      "balanced": true,
+      "selected_pages": 3,
+      "context": {
+        "status": "selected",
+        "unit": "UTF8_bytes",
+        "budget": 3000,
+        "used": 2999,
+        "candidate_count": 3,
+        "decisions": [
+          {
+            "id": "web:1bd6aedea756d8ac5a90c90b919360a9cc40082d7cd2b1fcf459ab8ea34654ee",
+            "selection": "excerpt",
+            "reason": "full_evidence_exceeds_bytes",
+            "excerpt": {
+              "start": 3399,
+              "end": 3722,
+              "unit": "chunk_text_characters"
+            },
+            "allocation_bytes": 999
+          },
+          {
+            "id": "web:5a1975fcbe5df2d6ad8bb553a0914e7a9fc918bd0ae4325a154e94f4390451bd",
+            "selection": "excerpt",
+            "reason": "full_evidence_exceeds_bytes",
+            "excerpt": {
+              "start": 2593,
+              "end": 3059,
+              "unit": "chunk_text_characters"
+            },
+            "allocation_bytes": 999
+          },
+          {
+            "id": "web:d6682fb5c36f41e41003140e07100ff9766dce1cbbb166971c3a7b6e25f38eeb",
+            "selection": "excerpt",
+            "reason": "full_evidence_exceeds_bytes",
+            "excerpt": {
+              "start": 4393,
+              "end": 4807,
+              "unit": "chunk_text_characters"
+            },
+            "allocation_bytes": 1013
+          }
+        ],
+        "allocation": "remaining_candidates_equal_shares_v1",
+        "method": "model_evidence_JSON_UTF8_bytes_v2"
+      },
+      "excerpts": [
+        {
+          "url": "https://juejin.cn/post/7488960073655631883",
+          "text_preview": "问题1：如何在依赖项中访问请求头信息？\nA) 直接从路由参数获取\nB) 通过\nRequest\n对象依赖\nC) 使用\nHeader\n参数声明\n答案：B和C都正确\n解析：两种合法方式：\n# 方法1：通过Request对象\ndef\nget_ua\n(\nrequest: Request\n):\nreturn\nrequest.headers.get(\n\"user-agen"
+        },
+        {
+          "url": "https://blog.shabbywu.cn/posts/2020/11/24/fastapi%E4%B8%8E%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E6%A8%A1%E5%BC%8F.html",
+          "text_preview": "from fastapi import Depends, FastAPI\n\n\nclass DSLQueryItem(BaseModel):\n    query_string: str = Field(None, description=\"使用 `query_string` 语法进行搜索\")\n    terms: Dict[str, List[str]] = "
+        },
+        {
+          "url": "https://fastapi.org.cn/tutorial/dependencies/",
+          "text_preview": "就知道如何处理剩下的事情。\n共享\nAnnotated\n依赖项\n¶\n在上面的例子中，你会看到有一点点\n代码重复\n。\n当你需要使用\ncommon_parameters()\n依赖项时，你必须写出带有类型注解和\nDepends()\n的完整参数\ncommons\n:\nAnnotated\n[\ndict\n,\nDepends\n(\ncommon_parameters\n)]\n但由"
+        }
+      ]
+    },
+    {
+      "budget": 9000,
+      "balanced": true,
+      "selected_pages": 3,
+      "context": {
+        "status": "selected",
+        "unit": "UTF8_bytes",
+        "budget": 9000,
+        "used": 8925,
+        "candidate_count": 3,
+        "decisions": [
+          {
+            "id": "web:1bd6aedea756d8ac5a90c90b919360a9cc40082d7cd2b1fcf459ab8ea34654ee",
+            "selection": "excerpt",
+            "reason": "full_evidence_exceeds_bytes",
+            "excerpt": {
+              "start": 3399,
+              "end": 4845,
+              "unit": "chunk_text_characters"
+            },
+            "allocation_bytes": 2999
+          },
+          {
+            "id": "web:5a1975fcbe5df2d6ad8bb553a0914e7a9fc918bd0ae4325a154e94f4390451bd",
+            "selection": "excerpt",
+            "reason": "full_evidence_exceeds_bytes",
+            "excerpt": {
+              "start": 2593,
+              "end": 4321,
+              "unit": "chunk_text_characters"
+            },
+            "allocation_bytes": 3014
+          },
+          {
+            "id": "web:d6682fb5c36f41e41003140e07100ff9766dce1cbbb166971c3a7b6e25f38eeb",
+            "selection": "excerpt",
+            "reason": "full_evidence_exceeds_bytes",
+            "excerpt": {
+              "start": 4393,
+              "end": 5760,
+              "unit": "chunk_text_characters"
+            },
+            "allocation_bytes": 3060
+          }
+        ],
+        "allocation": "remaining_candidates_equal_shares_v1",
+        "method": "model_evidence_JSON_UTF8_bytes_v2"
+      },
+      "excerpts": [
+        {
+          "url": "https://juejin.cn/post/7488960073655631883",
+          "text_preview": "问题1：如何在依赖项中访问请求头信息？\nA) 直接从路由参数获取\nB) 通过\nRequest\n对象依赖\nC) 使用\nHeader\n参数声明\n答案：B和C都正确\n解析：两种合法方式：\n# 方法1：通过Request对象\ndef\nget_ua\n(\nrequest: Request\n):\nreturn\nrequest.headers.get(\n\"user-agen"
+        },
+        {
+          "url": "https://blog.shabbywu.cn/posts/2020/11/24/fastapi%E4%B8%8E%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E6%A8%A1%E5%BC%8F.html",
+          "text_preview": "from fastapi import Depends, FastAPI\n\n\nclass DSLQueryItem(BaseModel):\n    query_string: str = Field(None, description=\"使用 `query_string` 语法进行搜索\")\n    terms: Dict[str, List[str]] = "
+        },
+        {
+          "url": "https://fastapi.org.cn/tutorial/dependencies/",
+          "text_preview": "就知道如何处理剩下的事情。\n共享\nAnnotated\n依赖项\n¶\n在上面的例子中，你会看到有一点点\n代码重复\n。\n当你需要使用\ncommon_parameters()\n依赖项时，你必须写出带有类型注解和\nDepends()\n的完整参数\ncommons\n:\nAnnotated\n[\ndict\n,\nDepends\n(\ncommon_parameters\n)]\n但由"
+        }
+      ]
+    }
+  ]
+}

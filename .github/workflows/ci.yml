@@ -1,0 +1,32 @@
+name: M1-M5 offline contracts
+on: [push, pull_request]
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest
+        env:
+          APP_MODE: offline
+          LITELLM_LOCAL_MODEL_COST_MAP: 'True'
+      - run: python scripts/startup_smoke.py
+  evaluation-adapter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-dev.txt -r requirements-eval.txt
+      - run: python -m pytest eval/tests
+        env:
+          APP_MODE: offline
+          RAGAS_DO_NOT_TRACK: 'true'

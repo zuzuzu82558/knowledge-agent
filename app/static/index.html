@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Knowledge Agent · 文档工作台</title><link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script></head>
+<body class="workspace"><header class="topbar"><div class="brand"><button id="toggleLibrary" class="text-button" aria-label="打开文档选择" aria-expanded="false">☰</button><span class="brand-icon">K</span><strong>Knowledge Agent</strong><span class="subtle">文档工作台</span></div><details class="mode-info"><summary id="mode">正在连接…</summary><p id="capabilities"></p><p id="connection" role="status"></p><button id="refresh" class="secondary">刷新状态</button></details></header>
+<main class="shell"><aside class="library"><div class="library-head"><h2>我的资料</h2><button id="closeLibrary" class="text-button" aria-label="关闭文档选择">✕</button><button id="openUpload">＋ 上传文档</button></div><div class="tabs"><button id="documentsTab" aria-pressed="true">文档</button><button id="historyTab" aria-pressed="false">最近问答</button></div><div id="documentsView"><label class="sr-only" for="documentSearch">搜索文档</label><input id="documentSearch" type="search" placeholder="搜索文档…"><p id="documentsEmpty" class="empty">上传第一篇文档，开始探索。</p><div id="documents"></div><details class="task-details"><summary>处理记录</summary><div id="jobs"></div></details></div><div id="historyView" hidden><p id="historyEmpty" class="empty">还没有问答记录</p><nav id="history" aria-label="最近问答"></nav></div><p class="library-foot">支持多选 · 最多 30 篇</p></aside>
+<article class="conversation"><div class="conversation-head"><div><span class="eyebrow">你的文档，你的依据</span><h1>文档问答</h1></div><div class="result-header-actions"><button id="toggleExcerpts" type="button" class="text-button" hidden>展开全部</button><button id="showEvidence" type="button" class="secondary" hidden>查看引用</button><button id="clearCurrent" type="button" class="text-button" hidden title="只清除当前展示，历史记录仍保留">清空当前结果</button></div></div><div class="reading"><section id="answer" aria-live="polite"><div id="welcome" class="welcome"><span class="welcome-mark" aria-hidden="true">✦</span><h2 id="welcomeTitle">正在加载资料…</h2><p id="welcomeDescription">连接后可选择文档开始提问。</p><button id="welcomeAction" type="button" class="secondary" hidden>选择文档</button></div></section><div id="resultActions" hidden><button id="copyAnswer" class="text-button">复制</button><button id="rerun" class="text-button">重新检索</button></div><details id="runDetails" hidden><summary>运行详情</summary><pre id="trace"></pre></details></div>
+<div class="composer"><div class="scope"><label for="sourceScope">资料范围</label><select id="sourceScope"><option value="documents">我的资料</option><option value="web">联网搜索</option><option value="combined">资料 + 联网</option></select><button id="selectDocuments" type="button" class="scope-button">＋ 选择文档</button><details id="scopeDetails" hidden><summary id="selectionCount">已选 0 篇文档</summary><div id="selectedNames"></div><button id="changeDocuments" type="button" class="text-button">调整文档范围</button></details><button id="clearSelection" class="text-button" hidden>清空选择</button></div><form id="ask"><label class="sr-only" for="question">针对所选资料提问</label><textarea id="question" rows="3" maxlength="2000" placeholder="针对所选资料提问…" required></textarea><div class="composer-tools">
+<div class="composer-picker" id="routePicker"><input id="route" type="hidden" value="qa"><button id="routeButton" type="button" class="composer-menu-button" aria-haspopup="menu" aria-expanded="false" aria-controls="routeMenu"><span id="routeLabel">问答</span><span aria-hidden="true">⌄</span></button>
+<div id="routeMenu" class="composer-popover task-menu" role="menu" aria-label="选择任务" hidden>
+<button type="button" role="menuitemradio" aria-checked="true" data-route="qa"><span>问答</span><small>查找具体信息</small></button>
+<button type="button" role="menuitemradio" aria-checked="false" data-route="summary"><span>全文洞察</span><small>浏览整体内容与章节</small></button>
+<button type="button" role="menuitemradio" aria-checked="false" data-route="relation"><span>关系分析</span><small>查找文档中的关联</small></button>
+<button type="button" role="menuitemradio" aria-checked="false" data-route="auto"><span>自动选择</span><small>按问题选择处理方式</small></button>
+<p class="menu-note">离线模式展示原文与章节覆盖；生成结论及图谱需要模型。</p></div></div>
+<div class="composer-picker" id="advancedPicker"><button id="advancedButton" type="button" class="composer-menu-button" aria-expanded="false" aria-controls="advancedPanel">高级设置<span aria-hidden="true">⌄</span></button>
+<div id="advancedPanel" class="composer-popover advanced-panel" role="region" aria-label="高级设置" hidden><label for="strategy">检索方式</label><select id="strategy"><option value="hybrid">混合检索</option><option value="sparse">词项检索（Sparse）</option><option value="dense">纯向量</option><option value="multi">混合 + 补充检索</option><option value="graph">混合 + 图谱</option></select><label for="workflow">执行流程</label><select id="workflow"><option value="fixed">固定检索 / 搜索 / 读取</option><option value="agent">受控 Agent（最多补检索两轮）</option></select><label class="bypass-label"><input id="rerank" type="checkbox">候选池重排</label><label class="bypass-label"><input id="bypass" type="checkbox" aria-describedby="bypassHint">本次重新检索</label><p id="bypassHint">跳过已保存的结果，重新检索所选资料。联网始终重新获取证据。</p></div></div>
+<button id="askButton" disabled>发送 ↑</button></div></form><p id="notice" role="status"></p><p class="composer-note">每次提问独立处理 · 请核对原文依据</p></div></article>
+<aside id="evidencePanel" class="source-panel" hidden aria-label="来源核对"><div class="panel-heading"><h2>来源核对</h2><button id="closeEvidence" class="text-button" aria-label="关闭引用">✕</button></div><p class="subtle">对照原文，确认每一处依据</p><div id="evidence"></div></aside></main>
+<dialog id="uploadDialog" aria-labelledby="uploadTitle">
+  <div class="panel-heading"><h2 id="uploadTitle">上传文档</h2><button id="closeUpload" type="button" class="text-button" aria-label="关闭上传">✕</button></div>
+  <form id="upload" novalidate>
+    <input id="file" type="file" accept=".pdf,.md,.txt,.csv,.docx,.html,.htm,.pptx,.xlsx,.xls" hidden aria-label="选择文档文件">
+    <div id="dropZone" class="file-drop-zone" aria-describedby="uploadFileHint">
+      <svg class="upload-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-7m-3 3 3-3 3 3"/></svg>
+      <p class="drop-prompt">将文件拖到这里，或</p>
+      <button id="chooseFile" type="button" class="file-picker-button">选择文件</button>
+      <p id="uploadFileHint" class="file-limit">单个文件最大 <span id="uploadLimit">20</span> MB</p>
+    </div>
+    <div id="selectedFile" class="selected-file" hidden>
+      <span id="selectedFileType" class="file-type" aria-hidden="true">文档</span>
+      <div class="selected-file-info"><p id="selectedFileName"></p><p id="selectedFileSize"></p></div>
+      <div class="selected-file-actions"><button id="replaceFile" type="button" class="text-button">更换</button><button id="removeFile" type="button" class="text-button">移除</button></div>
+    </div>
+    <div class="upload-help"><span>支持 PDF、Word、Excel 等</span><details><summary>查看全部格式</summary><p>PDF、DOCX、PPTX、XLSX、XLS、HTML、Markdown、TXT、CSV</p></details></div>
+    <p class="upload-scan-note">扫描件暂不支持文字识别。</p>
+    <div class="upload-target"><label for="version">保存为</label><select id="version" aria-describedby="uploadTargetHint"><option value="">新文档</option></select></div>
+    <p id="uploadTargetHint" class="upload-target-hint" hidden>保留历史版本，处理成功后使用新版本。</p>
+    <p id="uploadStatus" role="status" aria-live="polite"></p>
+    <div class="upload-footer"><button id="cancelUpload" type="button" class="text-button">取消</button><button id="uploadSubmit" type="submit" disabled>开始上传</button></div>
+  </form>
+</dialog>
+<section id="versionsPanel" class="version-overlay" hidden><button id="closeVersions" class="secondary">关闭版本信息</button><div id="versions"></div></section></body></html>

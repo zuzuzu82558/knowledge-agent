@@ -1,0 +1,73 @@
+INFO:     Started server process [29268]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:63167 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63175 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58496 - "GET /static/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58496 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53671 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58496 - "GET /api/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58496 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+{"event": "retrieval", "run_id": "76304ce5-6e9e-492c-9792-ef0415e8d8cf", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "context_selection", "run_id": "76304ce5-6e9e-492c-9792-ef0415e8d8cf", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "query_complete", "run_id": "76304ce5-6e9e-492c-9792-ef0415e8d8cf", "request_id": "2d50538e-1ba7-4a17-884b-1fb3e6024da6", "status": "refused", "elapsed_ms": 0, "steps": ["固定文档版本/索引代次/语料修订号", "独立召回", "RRF 融合", "引用范围与上下文预算检查"], "usage": []}
+INFO:     127.0.0.1:58496 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58496 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53671 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55973 - "GET /api/runs HTTP/1.1" 200 OK
+{"event": "ingest_start", "job_id": "146e776b-34b5-469c-8474-8b640395bc2c", "generation": "c1ec25d5-f1f2-5005-b212-9aabbdd114fd"}
+INFO:     127.0.0.1:55973 - "POST /api/documents HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:55973 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53671 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58496 - "GET /api/runs HTTP/1.1" 200 OK
+{"event": "parse", "job_id": "146e776b-34b5-469c-8474-8b640395bc2c", "generation": "c1ec25d5-f1f2-5005-b212-9aabbdd114fd", "elapsed_ms": 468, "timing": "measured_operation_retrospective_export"}
+Building prefix dict from the default dictionary ...
+Loading model from cache C:\Users\29654\AppData\Local\Temp\jieba.cache
+Loading model cost 0.796 seconds.
+Prefix dict has been built successfully.
+{"event": "index", "job_id": "146e776b-34b5-469c-8474-8b640395bc2c", "generation": "c1ec25d5-f1f2-5005-b212-9aabbdd114fd", "elapsed_ms": 16, "timing": "measured_operation_retrospective_export"}
+{"event": "ingest_complete", "job_id": "146e776b-34b5-469c-8474-8b640395bc2c", "generation": "c1ec25d5-f1f2-5005-b212-9aabbdd114fd", "chunks": 1, "elapsed_ms": 1297, "usage": []}
+INFO:     127.0.0.1:58496 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53671 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55973 - "GET /api/runs HTTP/1.1" 200 OK
+{"event": "retrieval", "run_id": "ac7533d9-362b-4cf7-9986-fa977a3667c6", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "context_selection", "run_id": "ac7533d9-362b-4cf7-9986-fa977a3667c6", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "query_complete", "run_id": "ac7533d9-362b-4cf7-9986-fa977a3667c6", "request_id": "29bf7870-52ce-4311-a033-b81bc677fdb8", "status": "offline_extracts", "elapsed_ms": 16, "steps": ["固定文档版本/索引代次/语料修订号", "独立召回", "RRF 融合", "引用范围与上下文预算检查"], "usage": []}
+INFO:     127.0.0.1:55973 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55973 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53671 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55973 - "GET /api/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55973 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53671 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58496 - "GET /api/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58496 - "GET /api/runs/76304ce5-6e9e-492c-9792-ef0415e8d8cf HTTP/1.1" 200 OK
+{"event": "retrieval", "run_id": "52e867db-2122-4ebe-9c01-b784bc58a055", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "context_selection", "run_id": "52e867db-2122-4ebe-9c01-b784bc58a055", "elapsed_ms": 0, "timing": "measured_operation_retrospective_export"}
+{"event": "query_complete", "run_id": "52e867db-2122-4ebe-9c01-b784bc58a055", "request_id": "02b2b969-ecff-490e-b343-03f94ee05f67", "status": "refused", "elapsed_ms": 0, "steps": ["固定文档版本/索引代次/语料修订号", "独立召回", "RRF 融合", "引用范围与上下文预算检查"], "usage": []}
+INFO:     127.0.0.1:58496 - "POST /api/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58496 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53671 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55973 - "GET /api/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55973 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53671 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58496 - "GET /api/runs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58496 - "GET /evidence/a6225352-a115-5c97-a5b1-7c03b6ce6377 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58496 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /static/evidence.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /api/evidence/a6225352-a115-5c97-a5b1-7c03b6ce6377 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /api/evidence/a6225352-a115-5c97-a5b1-7c03b6ce6377 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "DELETE /api/documents/fa5e6db5-3305-4383-a614-65a59cffd3ff HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /api/evidence/a6225352-a115-5c97-a5b1-7c03b6ce6377 HTTP/1.1" 410 Gone
+INFO:     127.0.0.1:58748 - "GET /evidence/web%3Aui-fixture HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58748 - "GET /static/style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58496 - "GET /static/evidence.js HTTP/1.1" 200 OK

@@ -1,0 +1,15 @@
+{
+  "mode": "offline",
+  "real_server_process": true,
+  "checks": [
+    "health",
+    "ui",
+    "ingest",
+    "query",
+    "citations",
+    "cache",
+    "full_document_coverage",
+    "delete"
+  ],
+  "status": "passed"
+}

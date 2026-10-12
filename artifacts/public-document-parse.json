@@ -1,0 +1,11 @@
+{
+  "source": "RFC 9110",
+  "bytes": 502941,
+  "blocks": 2121,
+  "chunks": 2168,
+  "max_chunk_chars": 900,
+  "content_length_chunks": 36,
+  "locations_valid": true,
+  "warnings": [],
+  "model_quality": "not_tested"
+}

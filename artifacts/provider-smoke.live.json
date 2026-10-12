@@ -1,0 +1,274 @@
+{
+  "budget_yuan": 1,
+  "retry_attempts": 0,
+  "counts": {
+    "search": 1,
+    "generation": 2,
+    "embedding": 2
+  },
+  "models": {
+    "generation": "openai/deepseek-flash",
+    "embedding": "openai/text-embedding-v3"
+  },
+  "quality_evaluation": "not_performed",
+  "actual_currency_charge": "check_provider_billing",
+  "citation_validation": "snapshot_existence_and_scope_not_semantic_support",
+  "data_dir": "E:\\codexproject\\knowledge-agent\\.tmp\\provider-smoke-20261011",
+  "checks": [
+    {
+      "name": "document_embedding",
+      "status": "completed"
+    },
+    {
+      "name": "document_rag",
+      "status": "answered",
+      "run_id": "df457c1e-bea6-44da-9fa8-48fc491b2fb8",
+      "claims": [
+        {
+          "text": "测试项目代号为青松。",
+          "citations": [
+            "1a6ebc6a-9c12-5b0d-9edf-ac679ed8e419"
+          ]
+        }
+      ],
+      "usage": [
+        {
+          "operation": "embedding",
+          "model": "openai/text-embedding-v3",
+          "purpose": "query",
+          "profile": "symmetric",
+          "batch_offset": 0,
+          "batch_size": 1,
+          "validation": "passed",
+          "usage": {
+            "completion_tokens": 0,
+            "prompt_tokens": 6,
+            "total_tokens": 6,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": null
+          }
+        },
+        {
+          "operation": "generation",
+          "model": "deepseek-flash",
+          "usage": {
+            "completion_tokens": 56,
+            "prompt_tokens": 292,
+            "total_tokens": 348,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 0,
+              "text_tokens": null,
+              "image_tokens": null,
+              "video_tokens": null
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 292
+          }
+        }
+      ],
+      "warnings": [],
+      "retrieval": {
+        "branches": {
+          "sparse": [
+            {
+              "id": "1a6ebc6a-9c12-5b0d-9edf-ac679ed8e419",
+              "score": 0.8630462288856506,
+              "rank": 1,
+              "query_rank": 1
+            }
+          ],
+          "dense": [
+            {
+              "id": "1a6ebc6a-9c12-5b0d-9edf-ac679ed8e419",
+              "score": 0.6944792704986493,
+              "rank": 1,
+              "query_rank": 1
+            }
+          ]
+        },
+        "fused": [
+          {
+            "id": "1a6ebc6a-9c12-5b0d-9edf-ac679ed8e419",
+            "rrf": 0.03278688524590164,
+            "branches": {
+              "sparse": {
+                "rank": 1,
+                "score": 0.8630462288856506
+              },
+              "dense": {
+                "rank": 1,
+                "score": 0.6944792704986493
+              }
+            },
+            "selection": "selected",
+            "reason": "full_evidence_fits"
+          }
+        ],
+        "fusion_candidates": [
+          {
+            "id": "1a6ebc6a-9c12-5b0d-9edf-ac679ed8e419",
+            "rrf": 0.03278688524590164,
+            "branches": {
+              "sparse": {
+                "rank": 1,
+                "score": 0.8630462288856506
+              },
+              "dense": {
+                "rank": 1,
+                "score": 0.6944792704986493
+              }
+            },
+            "selection": "selected",
+            "reason": "full_evidence_fits"
+          }
+        ],
+        "candidate_pool": [
+          "1a6ebc6a-9c12-5b0d-9edf-ac679ed8e419"
+        ],
+        "pool_decisions": [
+          {
+            "id": "1a6ebc6a-9c12-5b0d-9edf-ac679ed8e419",
+            "selection": "candidate",
+            "reason": "rrf_rank"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fixed_web_rag",
+      "status": "generation_failed",
+      "run_id": "6bbf2de3-4219-4fa9-925d-1d64a54c15f9",
+      "claims": [],
+      "usage": [
+        {
+          "operation": "generation",
+          "model": "deepseek-flash",
+          "usage": {
+            "completion_tokens": 346,
+            "prompt_tokens": 1879,
+            "total_tokens": 2225,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cached_tokens": 0,
+              "text_tokens": null,
+              "image_tokens": null,
+              "video_tokens": null
+            },
+            "prompt_cache_hit_tokens": 0,
+            "prompt_cache_miss_tokens": 1879
+          }
+        }
+      ],
+      "warnings": [
+        "read_page_failed:non_public_address_denied",
+        "部分证据按上下文预算摘录；excerpt 记录相对原 chunk 的字符区间，引用链接可查看完整原块。",
+        "ValueError:保留证据，不返回模拟回答"
+      ],
+      "online": {
+        "searches": [
+          {
+            "query": "RFC 9110 定义了什么？请用中文简短回答。",
+            "results": [
+              {
+                "url": "https://www.arc-it.net/html/standards/standard1500.html",
+                "title": "IETF RFC 9110 HTTP Semantics",
+                "snippet": "### Description\n\nThe Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibility mechanisms, and the \"http\" and \"https\" Uniform Resource Identifier (URI) schemes.\n\n### Standard In Solutions [...] Architecture Reference for Cooperative and Intelligent Transportation (ARC-IT)\n\nSkip to content\n\nArchitecture\n\nService Packages Views Enterprise Functional Physical Communications Methodology Architecture Structure Enterprise Viewpoint Functional Viewpoint Physical Viewpoint Communications Viewpoint Security\n\nArchitecture and Standards Use\n\nARC-IT & Planning Regional Architecture Definition Regional Architecture Use Project Development Standards Use\n\nArchitecture Resources [...] US: GTFS-Flex - Secure Internet (ITS)\n US: MDS - Secure Internet (ITS)\n US: TIDES - Secure Internet (ITS)\n US: TMDD - NTCIP Messaging\n US: TOMP - Secure Internet (ITS)\n US: TOMP - Secure Wireless Internet (ITS)\n US: WZDx - Guaranteed Secure Internet (ITS)\n US: WZDx - Secure Internet (ITS)",
+                "published_at": null,
+                "read_status": "discovered_not_read"
+              },
+              {
+                "url": "https://httpwg.org/specs",
+                "title": "📄 HTTP Documentation",
+                "snippet": "# 📄 HTTP Documentation\n\nHTTP is defined by these IETF RFCs and IANA registries.\n\n## Core Specifications\n\nThe “core” semantics of the HTTP protocol are defined by:\n\n RFC 9110: HTTP Semantics\n RFC 9111: HTTP Caching\n\nThose semantics are expressed “on the wire” in three ways:\n\n RFC 9112: HTTP/1.1\n RFC 9113: HTTP/2\n RFC 9114: HTTP/3\n\nLater versions of HTTP offer field compression:\n\n RFC 7541: HPACK Header Compression for HTTP/2\n RFC 9204: QPACK Field Compression for HTTP/3 [...] RFC 5861: Cache-Control: stale-while-revalidate and stale-if-error\n RFC 8246: Cache-Control: immutable\n RFC 9211: Cache-Status Header Field\n RFC 9213: Targeted Cache Control Fields\n RFC 9875: HTTP Cache Groups\n\n### Content-Related Extensions\n\n RFC 6265: Cookies\n RFC 6266: Content-Disposition\n RFC 7694: Client Initiated Content-Encoding\n RFC 8144: Prefer Header Field\n RFC 8288: Web Linking\n RFC 8942: HTTP Client Hints\n RFC 9842: Compression Dictionary Transport [...] ### Connection and Intermediary Extensions\n\n RFC 7639: ALPN Header Field\n RFC 7838: Alternative Services\n RFC 8336: ORIGIN HTTP/2 Frame\n RFC 8441: Bootstrapping WebSockets with HTTP/2\n RFC 9209: Proxy-Status Field\n RFC 9218: Extensible Prioritization Scheme for HTTP\n RFC 9220: Bootstrapping WebSockets with HTTP/3\n RFC 9298: Proxying UDP in HTTP\n RFC 9412: Origin HTTP/3 Frame\n RFC 9440: Client-Cert HTTP Header Field\n RFC 10036: Incremental Forwarding of HTTP Messages",
+                "published_at": "Thu, 04 Aug 2016 00:00:00 GMT",
+                "read_status": "discovered_not_read"
+              },
+              {
+                "url": "https://www.youtube.com/watch?v=CvEBA_Sm-mw",
+                "title": "On HTTP Request Smuggling - RFC 9110 Style",
+                "snippet": "[6:38] here's the kicker. The RFC says the server must perform that check atomically. The check-in create happens in one unbreakable step. The server's\n[6:48] own protocol compliance becomes our exploit. We use the rules to beat the application's broken logic. So, there\n[6:55] you have it. Four different attacks pulled right from the pages of RFC 9110.\n[7:02] We've turned routing rules inside out, made headers lie, and used protocol safety features to create chaos. And [...] ### Transcript\n[0:00] All right, let's jump right in. Most folks look at RFC 9110 and see a rule book for the internet, a dry technical\n[0:08] standard. But if you know how to read it, it's not a rule book. It's a map of the attack surface. So today, we're going to flip the script on this thing.\n[0:17] We're treating this big dense document as an arsenal. We're going to dig into the nitty-gritty, the weird edge cases, and the little ambiguities that for a [...] [4:00] complex piece by piece method. The killer part, the RFC never defines what a server should do if a request has both\n[4:08] headers. It's a total gray area. And for us, that gray area is a playground. So, let's take the first flavor, the CLT\n[4:17] attack. The front-end proxy only respects content length. So, we give it a length that makes it think our request is small and harmless. But hidden inside",
+                "published_at": "Mon, 11 Aug 2025 00:00:00 GMT",
+                "read_status": "discovered_not_read"
+              }
+            ],
+            "provider": "tavily",
+            "usage": {
+              "credits": 1
+            }
+          }
+        ],
+        "pages": [
+          {
+            "url": "https://www.arc-it.net/html/standards/standard1500.html",
+            "title": "IETF RFC 9110 HTTP Semantics",
+            "read_status": "body_read",
+            "id": "web:7db74886ddb4f7fac48e98e8b4c26d700a5391f0b40b56270d74efa93b346a7a",
+            "fetched_at": "2026-10-11T12:51:14.652818+00:00",
+            "published_at": null,
+            "truncated": false
+          },
+          {
+            "url": "https://httpwg.org/specs/",
+            "title": "📄 HTTP Documentation",
+            "read_status": "body_read",
+            "id": "web:59fe401bd186087ba357f594e2219609bf161385e2dd95beb97c1e50c2b72e55",
+            "fetched_at": "2026-10-11T12:51:15.703886+00:00",
+            "published_at": null,
+            "truncated": false
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=CvEBA_Sm-mw",
+            "title": "On HTTP Request Smuggling - RFC 9110 Style",
+            "read_status": "body_unavailable",
+            "error": "non_public_address_denied",
+            "snippet": "[6:38] here's the kicker. The RFC says the server must perform that check atomically. The check-in create happens in one unbreakable step. The server's\n[6:48] own protocol compliance becomes our exploit. We use the rules to beat the application's broken logic. So, there\n[6:55] you have it. Four different attacks pulled right from the pages of RFC 9110.\n[7:02] We've turned routing rules inside out, made headers lie, and used protocol safety features to create chaos. And [...] ### Transcript\n[0:00] All right, let's jump right in. Most folks look at RFC 9110 and see a rule book for the internet, a dry technical\n[0:08] standard. But if you know how to read it, it's not a rule book. It's a map of the attack surface. So today, we're going to flip the script on this thing.\n[0:17] We're treating this big dense document as an arsenal. We're going to dig into the nitty-gritty, the weird edge cases, and the little ambiguities that for a [...] [4:00] complex piece by piece method. The killer part, the RFC never defines what a server should do if a request has both\n[4:08] headers. It's a total gray area. And for us, that gray area is a playground. So, let's take the first flavor, the CLT\n[4:17] attack. The front-end proxy only respects content length. So, we give it a length that makes it think our request is small and harmless. But hidden inside"
+          }
+        ],
+        "citation_validation": "snapshot_existence_and_scope_not_semantic_support"
+      },
+      "tool_trace": [
+        {
+          "tool": "search_web",
+          "input": {
+            "query": "RFC 9110 定义了什么？请用中文简短回答。"
+          },
+          "status": "ok",
+          "result_count": 3,
+          "elapsed_ms": 2000
+        },
+        {
+          "tool": "read_page",
+          "input": {
+            "url": "https://www.arc-it.net/html/standards/standard1500.html"
+          },
+          "status": "ok",
+          "result_count": 1,
+          "elapsed_ms": 1500
+        },
+        {
+          "tool": "read_page",
+          "input": {
+            "url": "https://httpwg.org/specs"
+          },
+          "status": "ok",
+          "result_count": 1,
+          "elapsed_ms": 2547
+        },
+        {
+          "tool": "read_page",
+          "input": {
+            "url": "https://www.youtube.com/watch?v=CvEBA_Sm-mw"
+          },
+          "status": "failed",
+          "error": "non_public_address_denied",
+          "elapsed_ms": 32
+        }
+      ],
+      "snapshot_checks": []
+    }
+  ],
+  "elapsed_ms": 10734
+}

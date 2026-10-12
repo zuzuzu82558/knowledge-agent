@@ -1,0 +1,144 @@
+{
+  "schema": "web-eval-snapshot-v1",
+  "provenance": "synthetic_fixture_not_real_search_or_page",
+  "cases": [
+    {
+      "id": "w01",
+      "document": "supply-chain.md",
+      "question": "120亿元与130亿元能互相替代吗？",
+      "reference": "不能默认替代，应并列来源和未说明的口径。",
+      "searches": [
+        {
+          "query": "120亿元与130亿元能互相替代吗？",
+          "results": [
+            {
+              "url": "https://fixture.example/case-1",
+              "title": "合成网页 fixture 1",
+              "snippet": "这是显式测试替身的发现摘要，不是真实搜索结果。"
+            }
+          ]
+        }
+      ],
+      "pages": [
+        {
+          "id": "web:aa91a09e8f74e3b8ea028617a4fb9ee9293bdd4c825eb4b8d1e81dd5d2ab9df0",
+          "source_type": "web",
+          "url": "https://fixture.example/case-1",
+          "discovered_url": "https://fixture.example/case-1",
+          "title": "合成网页 fixture 1",
+          "fetched_at": "2026-10-11T00:00:00+00:00",
+          "published_at": null,
+          "published_at_basis": null,
+          "search_published_at": null,
+          "text": "某媒体称星河2025年收入130亿元，未说明合并范围。",
+          "read_status": "body_read",
+          "truncated": false,
+          "body_chars": 27,
+          "html_snapshot": "<html><title>合成网页 fixture 1</title><main><p>某媒体称星河2025年收入130亿元，未说明合并范围。</p></main></html>",
+          "html_sha256": "6d387561c04582ba9694a42d6402be447103cd21a3077681b299e2a5faa081c3",
+          "body_sha256": "ab64ebbf876b22aad4e7fd8edbc10bbb413d66174b507a619603abb767da5605",
+          "headings": [],
+          "locations": [
+            {
+              "url": "https://fixture.example/case-1"
+            }
+          ],
+          "redirects": [],
+          "provenance": "synthetic_fixture_not_live_page"
+        }
+      ]
+    },
+    {
+      "id": "w02",
+      "document": "supply-chain.md",
+      "question": "140亿元能称为2026年实际收入吗？",
+      "reference": "不能，仍为预测；网页与文档都不证明实际收入。",
+      "searches": [
+        {
+          "query": "140亿元能称为2026年实际收入吗？",
+          "results": [
+            {
+              "url": "https://fixture.example/case-2",
+              "title": "合成网页 fixture 2",
+              "snippet": "这是显式测试替身的发现摘要，不是真实搜索结果。"
+            }
+          ]
+        }
+      ],
+      "pages": [
+        {
+          "id": "web:db476628d2d03f0ef10957169cdf7c0161f9529c58e92c4f4dc27c17a27364bc",
+          "source_type": "web",
+          "url": "https://fixture.example/case-2",
+          "discovered_url": "https://fixture.example/case-2",
+          "title": "合成网页 fixture 2",
+          "fetched_at": "2026-10-11T00:00:00+00:00",
+          "published_at": null,
+          "published_at_basis": null,
+          "search_published_at": null,
+          "text": "管理层预测2026年收入140亿元，这是预测，不是实际收入。",
+          "read_status": "body_read",
+          "truncated": false,
+          "body_chars": 30,
+          "html_snapshot": "<html><title>合成网页 fixture 2</title><main><p>管理层预测2026年收入140亿元，这是预测，不是实际收入。</p></main></html>",
+          "html_sha256": "e81647182c9cbfc13d80289246e9a8fbaa2f9e27c17f85f6dddf8dc56b9b47f2",
+          "body_sha256": "12f7353631bf0642a090eeb4d2ce7d648c08e1b8cbbc110fa1852431aa8ef1db",
+          "headings": [],
+          "locations": [
+            {
+              "url": "https://fixture.example/case-2"
+            }
+          ],
+          "redirects": [],
+          "provenance": "synthetic_fixture_not_live_page"
+        }
+      ]
+    },
+    {
+      "id": "w03",
+      "document": "supply-chain.md",
+      "question": "第二供应商认证年末完成了吗？",
+      "reference": "2025年年末资料称未完成；更新缺少日期，不能反推2025年已经完成。",
+      "searches": [
+        {
+          "query": "第二供应商认证年末完成了吗？",
+          "results": [
+            {
+              "url": "https://fixture.example/case-3",
+              "title": "合成网页 fixture 3",
+              "snippet": "这是显式测试替身的发现摘要，不是真实搜索结果。"
+            }
+          ]
+        }
+      ],
+      "pages": [
+        {
+          "id": "web:8c68bbea189e581045a04727bebb74d5ffbcdf33a46d4fffa483c25028a9a239",
+          "source_type": "web",
+          "url": "https://fixture.example/case-3",
+          "discovered_url": "https://fixture.example/case-3",
+          "title": "合成网页 fixture 3",
+          "fetched_at": "2026-10-11T00:00:00+00:00",
+          "published_at": null,
+          "published_at_basis": null,
+          "search_published_at": null,
+          "text": "一份2026年更新称第二供应商已通过认证，但未说明通过日期。",
+          "read_status": "body_read",
+          "truncated": false,
+          "body_chars": 30,
+          "html_snapshot": "<html><title>合成网页 fixture 3</title><main><p>一份2026年更新称第二供应商已通过认证，但未说明通过日期。</p></main></html>",
+          "html_sha256": "646cf88a0dbde9eb56053585423adfe42c44fc812182a4aad3b9bb00d31a077a",
+          "body_sha256": "ef1f2d2ccb6b1e698b6c445d4edd426caa4405aaa24c7f4a362abd72fa50810b",
+          "headings": [],
+          "locations": [
+            {
+              "url": "https://fixture.example/case-3"
+            }
+          ],
+          "redirects": [],
+          "provenance": "synthetic_fixture_not_live_page"
+        }
+      ]
+    }
+  ]
+}

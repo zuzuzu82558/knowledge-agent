@@ -1,0 +1,3725 @@
+{
+  "schema": "online-evaluation-v1",
+  "snapshot_file_sha256": "a6ec745bc274cf188958528be41088587424c5137ef5f366c4d242ea27da1c26",
+  "snapshot_provenance": "synthetic_fixture_not_real_search_or_page",
+  "mode": "offline",
+  "rows": [
+    {
+      "id": "w01",
+      "scope": "documents",
+      "workflow": "fixed",
+      "reference": "不能默认替代，应并列来源和未说明的口径。",
+      "task_completion": null,
+      "human_citation_support": null,
+      "semantic_support": "not_judged",
+      "status": "offline_extracts",
+      "run": {
+        "run_id": "6ac68973-ddb4-4f87-a7a9-431c701654e6",
+        "request_id": null,
+        "question": "120亿元与130亿元能互相替代吗？",
+        "mode": "offline",
+        "snapshot": {
+          "documents": [
+            "56fe829b-f4d5-43c3-910a-63d6cf3303b4"
+          ],
+          "generations": [
+            "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b"
+          ],
+          "versions": [
+            "12ead991-66b6-5c88-97a1-5061510238e8"
+          ],
+          "corpus_revision": 1,
+          "collection": "online_ac5c6e2890_543a8ee761ada63f",
+          "contract": {
+            "parser": "m5-v3-html-dom-table-grid",
+            "chunker": "section-900-v2-bounded-table",
+            "sparse": "jieba-0.42.1-bm25-k1=1.5-b=0-qdrant-idf-v1",
+            "mode": "offline",
+            "embedding": "openai/text-embedding-3-small",
+            "revision": "provider-default",
+            "dimension": 1536,
+            "distance": "Cosine",
+            "normalization": "qdrant-cosine",
+            "endpoint": null,
+            "chunk_contract": {
+              "strategy": "legacy",
+              "size": 900,
+              "overlap": 0,
+              "version": "boundary-v1"
+            },
+            "embedding_input": {
+              "profile": "symmetric",
+              "query_prefix": "",
+              "document_prefix": "",
+              "version": "purpose-v1"
+            }
+          },
+          "idf_scope": "whole_collection_including_retained_and_partial_generations"
+        },
+        "evidence": [
+          {
+            "locations": [
+              {
+                "line_start": 41,
+                "line_end": 41
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "口径冲突"
+            ],
+            "block": 20,
+            "text": "某媒体称星河公司2025年收入为130亿元人民币，但未说明合并范围。该媒体数字与公司披露不同，不能直接替代120亿元的全年合并历史数据。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 68,
+              "unit": "block_characters"
+            },
+            "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 23,
+                "line_end": 23
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "财务口径"
+            ],
+            "block": 11,
+            "text": "星河公司2025年收入为120亿元人民币，2024年收入为100亿元人民币，均为全年合并口径历史数据。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 51,
+              "unit": "block_characters"
+            },
+            "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 35,
+                "line_end": 35
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "预测与观点"
+            ],
+            "block": 17,
+            "text": "## 预测与观点",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 8,
+              "unit": "block_characters"
+            },
+            "id": "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 9,
+                "line_end": 9
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "采购与供应"
+            ],
+            "block": 4,
+            "text": "## 采购与供应",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 8,
+              "unit": "block_characters"
+            },
+            "id": "33ec1efc-2b50-5500-9609-4a88cfb22160",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 5,
+                "line_end": 5
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "公司与产品"
+            ],
+            "block": 2,
+            "text": "## 公司与产品",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 8,
+              "unit": "block_characters"
+            },
+            "id": "ada99668-9808-55c8-b187-398e0365e403",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 25,
+                "line_end": 25
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "财务口径"
+            ],
+            "block": 12,
+            "text": "星河公司2025年研发投入为18亿元人民币，均为全年合并口径历史数据。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 35,
+              "unit": "block_characters"
+            },
+            "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 37,
+                "line_end": 37
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "预测与观点"
+            ],
+            "block": 18,
+            "text": "管理层预测2026年收入为140亿元人民币，口径为全年合并预测。该预测不能作为2026年实际收入。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 49,
+              "unit": "block_characters"
+            },
+            "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          }
+        ],
+        "claims": [],
+        "status": "offline_extracts",
+        "warnings": [
+          "离线词项检索与原文摘录；未调用 embedding 或生成模型，不代表问题已得到回答。"
+        ],
+        "steps": [
+          "固定文档版本/索引代次/语料修订号",
+          "独立召回",
+          "RRF 融合",
+          "引用范围与上下文预算检查"
+        ],
+        "usage": [],
+        "created_at": "2026-10-11T12:18:09.501674+00:00",
+        "scope": "documents",
+        "workflow": "fixed",
+        "policy": {
+          "prompt": "online-citations-v1",
+          "controller": "round-rrf-bounded-input-v2",
+          "rerank_input": "equal_text_caps_full_request_bytes_v1",
+          "rrf_k": 60,
+          "branch_limit": 20,
+          "fused_limit": 24,
+          "top_k": 8,
+          "context_tokens": 3000,
+          "evidence_budget_bytes": 3000,
+          "model_request_budget_bytes": 64000,
+          "scope": "documents",
+          "workflow": "fixed",
+          "agent_max_rounds": 2,
+          "search_provider": "disabled",
+          "search_max_results": 5,
+          "network_limits": {
+            "search_calls": 3,
+            "search_seconds": 10,
+            "page_seconds": 10,
+            "page_bytes": 1000000,
+            "page_text_chars": 30000,
+            "pages": 6,
+            "redirects": 3,
+            "concurrency": 3
+          },
+          "generation_max_tokens": 1200,
+          "budget_method": "model_evidence_JSON_UTF8_bytes_v2",
+          "generation_model": "openai/gpt-4o-mini",
+          "retries": 1,
+          "citation_validation": "existence_and_scope_not_entailment",
+          "route": "qa",
+          "strategy": "hybrid",
+          "graph": "facts-v1",
+          "summary": "summary-v1",
+          "graph_storage": "df33dda8-0ca4-57f7-b2eb-2c2139ba215d",
+          "rerank_requested": false,
+          "rerank": null,
+          "fallback": null,
+          "generation_endpoint": null
+        },
+        "queue_ms": 0,
+        "cache": {
+          "status": "bypass"
+        },
+        "route": "qa",
+        "strategy": "hybrid",
+        "retrieval": {
+          "branches": {
+            "sparse": [
+              {
+                "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+                "score": 11.87231159210205,
+                "rank": 1,
+                "query_rank": 1
+              },
+              {
+                "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+                "score": 4.653158187866211,
+                "rank": 2,
+                "query_rank": 2
+              },
+              {
+                "id": "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+                "score": 1.6739764213562012,
+                "rank": 3,
+                "query_rank": 3
+              },
+              {
+                "id": "33ec1efc-2b50-5500-9609-4a88cfb22160",
+                "score": 1.6739764213562012,
+                "rank": 4,
+                "query_rank": 4
+              },
+              {
+                "id": "ada99668-9808-55c8-b187-398e0365e403",
+                "score": 1.6739764213562012,
+                "rank": 5,
+                "query_rank": 5
+              },
+              {
+                "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+                "score": 1.6739764213562012,
+                "rank": 6,
+                "query_rank": 6
+              },
+              {
+                "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+                "score": 1.6739764213562012,
+                "rank": 7,
+                "query_rank": 7
+              }
+            ]
+          },
+          "fused": [
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "rrf": 0.01639344262295082,
+              "branches": {
+                "sparse": {
+                  "rank": 1,
+                  "score": 11.87231159210205
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "rrf": 0.016129032258064516,
+              "branches": {
+                "sparse": {
+                  "rank": 2,
+                  "score": 4.653158187866211
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+              "rrf": 0.015873015873015872,
+              "branches": {
+                "sparse": {
+                  "rank": 3,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "33ec1efc-2b50-5500-9609-4a88cfb22160",
+              "rrf": 0.015625,
+              "branches": {
+                "sparse": {
+                  "rank": 4,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "ada99668-9808-55c8-b187-398e0365e403",
+              "rrf": 0.015384615384615385,
+              "branches": {
+                "sparse": {
+                  "rank": 5,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "rrf": 0.015151515151515152,
+              "branches": {
+                "sparse": {
+                  "rank": 6,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "rrf": 0.014925373134328358,
+              "branches": {
+                "sparse": {
+                  "rank": 7,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "fusion_candidates": [
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "rrf": 0.01639344262295082,
+              "branches": {
+                "sparse": {
+                  "rank": 1,
+                  "score": 11.87231159210205
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "rrf": 0.016129032258064516,
+              "branches": {
+                "sparse": {
+                  "rank": 2,
+                  "score": 4.653158187866211
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+              "rrf": 0.015873015873015872,
+              "branches": {
+                "sparse": {
+                  "rank": 3,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "33ec1efc-2b50-5500-9609-4a88cfb22160",
+              "rrf": 0.015625,
+              "branches": {
+                "sparse": {
+                  "rank": 4,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "ada99668-9808-55c8-b187-398e0365e403",
+              "rrf": 0.015384615384615385,
+              "branches": {
+                "sparse": {
+                  "rank": 5,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "rrf": 0.015151515151515152,
+              "branches": {
+                "sparse": {
+                  "rank": 6,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "rrf": 0.014925373134328358,
+              "branches": {
+                "sparse": {
+                  "rank": 7,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "candidate_pool": [
+            "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+            "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+            "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+            "33ec1efc-2b50-5500-9609-4a88cfb22160",
+            "ada99668-9808-55c8-b187-398e0365e403",
+            "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+            "e906ecf1-525a-58b6-a1bf-f45211ac514d"
+          ],
+          "pool_decisions": [
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "33ec1efc-2b50-5500-9609-4a88cfb22160",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "ada99668-9808-55c8-b187-398e0365e403",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            }
+          ]
+        },
+        "context": {
+          "status": "selected",
+          "unit": "UTF8_bytes",
+          "budget": 3000,
+          "used": 2238,
+          "candidate_count": 7,
+          "decisions": [
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "33ec1efc-2b50-5500-9609-4a88cfb22160",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "ada99668-9808-55c8-b187-398e0365e403",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "method": "model_evidence_JSON_UTF8_bytes_v2"
+        },
+        "fallback_used": false,
+        "model_calls": [],
+        "model_request_budget": [],
+        "model_budget": {
+          "purpose": "interactive",
+          "limit_calls": 40,
+          "used_calls": 0
+        },
+        "elapsed_ms": 0,
+        "cost": {
+          "value": null,
+          "status": "no_cloud_calls"
+        }
+      },
+      "citation_metrics": {
+        "citation_scope_validity": null,
+        "semantic_support": "not_judged"
+      },
+      "latency_ms": 0,
+      "usage": [],
+      "cost": {
+        "value": null,
+        "status": "no_cloud_calls"
+      },
+      "failure_cases": [],
+      "replay_searches": 0,
+      "replay_reads": 0
+    },
+    {
+      "id": "w01",
+      "scope": "combined",
+      "workflow": "fixed",
+      "reference": "不能默认替代，应并列来源和未说明的口径。",
+      "task_completion": null,
+      "human_citation_support": null,
+      "semantic_support": "not_judged",
+      "status": "offline_extracts",
+      "run": {
+        "run_id": "4594d4c9-11a0-403b-8273-e5195426c31e",
+        "request_id": null,
+        "question": "120亿元与130亿元能互相替代吗？",
+        "mode": "offline",
+        "snapshot": {
+          "documents": [
+            "56fe829b-f4d5-43c3-910a-63d6cf3303b4"
+          ],
+          "generations": [
+            "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b"
+          ],
+          "versions": [
+            "12ead991-66b6-5c88-97a1-5061510238e8"
+          ],
+          "corpus_revision": 1,
+          "collection": "online_ac5c6e2890_543a8ee761ada63f",
+          "contract": {
+            "parser": "m5-v3-html-dom-table-grid",
+            "chunker": "section-900-v2-bounded-table",
+            "sparse": "jieba-0.42.1-bm25-k1=1.5-b=0-qdrant-idf-v1",
+            "mode": "offline",
+            "embedding": "openai/text-embedding-3-small",
+            "revision": "provider-default",
+            "dimension": 1536,
+            "distance": "Cosine",
+            "normalization": "qdrant-cosine",
+            "endpoint": null,
+            "chunk_contract": {
+              "strategy": "legacy",
+              "size": 900,
+              "overlap": 0,
+              "version": "boundary-v1"
+            },
+            "embedding_input": {
+              "profile": "symmetric",
+              "query_prefix": "",
+              "document_prefix": "",
+              "version": "purpose-v1"
+            }
+          },
+          "idf_scope": "whole_collection_including_retained_and_partial_generations"
+        },
+        "evidence": [
+          {
+            "locations": [
+              {
+                "line_start": 41,
+                "line_end": 41
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "口径冲突"
+            ],
+            "block": 20,
+            "text": "某媒体称星河公司2025年收入为130亿元人民币，但未说明合并范围。该媒体数字与公司披露不同，不能直接替代120亿元的全年合并历史数据。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 68,
+              "unit": "block_characters"
+            },
+            "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "id": "web:aa91a09e8f74e3b8ea028617a4fb9ee9293bdd4c825eb4b8d1e81dd5d2ab9df0",
+            "source_type": "web",
+            "url": "https://fixture.example/case-1",
+            "discovered_url": "https://fixture.example/case-1",
+            "title": "合成网页 fixture 1",
+            "fetched_at": "2026-10-11T00:00:00+00:00",
+            "published_at": null,
+            "published_at_basis": null,
+            "search_published_at": null,
+            "text": "某媒体称星河2025年收入130亿元，未说明合并范围。",
+            "read_status": "body_read",
+            "truncated": false,
+            "body_chars": 27,
+            "html_sha256": "6d387561c04582ba9694a42d6402be447103cd21a3077681b299e2a5faa081c3",
+            "body_sha256": "ab64ebbf876b22aad4e7fd8edbc10bbb413d66174b507a619603abb767da5605",
+            "headings": [],
+            "locations": [
+              {
+                "url": "https://fixture.example/case-1"
+              }
+            ],
+            "redirects": [],
+            "provenance": "synthetic_fixture_not_live_page"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 23,
+                "line_end": 23
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "财务口径"
+            ],
+            "block": 11,
+            "text": "星河公司2025年收入为120亿元人民币，2024年收入为100亿元人民币，均为全年合并口径历史数据。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 51,
+              "unit": "block_characters"
+            },
+            "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 35,
+                "line_end": 35
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "预测与观点"
+            ],
+            "block": 17,
+            "text": "## 预测与观点",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 8,
+              "unit": "block_characters"
+            },
+            "id": "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 9,
+                "line_end": 9
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "采购与供应"
+            ],
+            "block": 4,
+            "text": "## 采购与供应",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 8,
+              "unit": "block_characters"
+            },
+            "id": "33ec1efc-2b50-5500-9609-4a88cfb22160",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 5,
+                "line_end": 5
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "公司与产品"
+            ],
+            "block": 2,
+            "text": "## 公司与产品",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 8,
+              "unit": "block_characters"
+            },
+            "id": "ada99668-9808-55c8-b187-398e0365e403",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 25,
+                "line_end": 25
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "财务口径"
+            ],
+            "block": 12,
+            "text": "星河公司2025年研发投入为18亿元人民币，均为全年合并口径历史数据。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 35,
+              "unit": "block_characters"
+            },
+            "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 37,
+                "line_end": 37
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "预测与观点"
+            ],
+            "block": 18,
+            "text": "管理层预测2026年收入为140亿元人民币，口径为全年合并预测。该预测不能作为2026年实际收入。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 49,
+              "unit": "block_characters"
+            },
+            "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          }
+        ],
+        "claims": [],
+        "status": "offline_extracts",
+        "warnings": [
+          "离线词项检索与原文摘录；未调用 embedding 或生成模型，不代表问题已得到回答。"
+        ],
+        "steps": [
+          "固定文档版本/索引代次/语料修订号",
+          "独立召回",
+          "RRF 融合",
+          "引用范围与上下文预算检查"
+        ],
+        "usage": [],
+        "created_at": "2026-10-11T12:18:09.506403+00:00",
+        "scope": "combined",
+        "workflow": "fixed",
+        "policy": {
+          "prompt": "online-citations-v1",
+          "controller": "round-rrf-bounded-input-v2",
+          "rerank_input": "equal_text_caps_full_request_bytes_v1",
+          "rrf_k": 60,
+          "branch_limit": 20,
+          "fused_limit": 24,
+          "top_k": 8,
+          "context_tokens": 3000,
+          "evidence_budget_bytes": 3000,
+          "model_request_budget_bytes": 64000,
+          "scope": "combined",
+          "workflow": "fixed",
+          "agent_max_rounds": 2,
+          "search_provider": "disabled",
+          "search_max_results": 5,
+          "network_limits": {
+            "search_calls": 3,
+            "search_seconds": 10,
+            "page_seconds": 10,
+            "page_bytes": 1000000,
+            "page_text_chars": 30000,
+            "pages": 6,
+            "redirects": 3,
+            "concurrency": 3
+          },
+          "generation_max_tokens": 1200,
+          "budget_method": "model_evidence_JSON_UTF8_bytes_v2",
+          "generation_model": "openai/gpt-4o-mini",
+          "retries": 1,
+          "citation_validation": "existence_and_scope_not_entailment",
+          "route": "qa",
+          "strategy": "hybrid",
+          "graph": "facts-v1",
+          "summary": "summary-v1",
+          "graph_storage": "df33dda8-0ca4-57f7-b2eb-2c2139ba215d",
+          "rerank_requested": false,
+          "rerank": null,
+          "fallback": null,
+          "generation_endpoint": null
+        },
+        "queue_ms": 0,
+        "cache": {
+          "status": "bypass"
+        },
+        "route": "qa",
+        "strategy": "hybrid",
+        "retrieval": {
+          "branches": {
+            "sparse": [
+              {
+                "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+                "score": 11.87231159210205,
+                "rank": 1,
+                "query_rank": 1
+              },
+              {
+                "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+                "score": 4.653158187866211,
+                "rank": 2,
+                "query_rank": 2
+              },
+              {
+                "id": "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+                "score": 1.6739764213562012,
+                "rank": 3,
+                "query_rank": 3
+              },
+              {
+                "id": "33ec1efc-2b50-5500-9609-4a88cfb22160",
+                "score": 1.6739764213562012,
+                "rank": 4,
+                "query_rank": 4
+              },
+              {
+                "id": "ada99668-9808-55c8-b187-398e0365e403",
+                "score": 1.6739764213562012,
+                "rank": 5,
+                "query_rank": 5
+              },
+              {
+                "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+                "score": 1.6739764213562012,
+                "rank": 6,
+                "query_rank": 6
+              },
+              {
+                "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+                "score": 1.6739764213562012,
+                "rank": 7,
+                "query_rank": 7
+              }
+            ]
+          },
+          "fused": [
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "rrf": 0.01639344262295082,
+              "branches": {
+                "sparse": {
+                  "rank": 1,
+                  "score": 11.87231159210205
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "rrf": 0.016129032258064516,
+              "branches": {
+                "sparse": {
+                  "rank": 2,
+                  "score": 4.653158187866211
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+              "rrf": 0.015873015873015872,
+              "branches": {
+                "sparse": {
+                  "rank": 3,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "33ec1efc-2b50-5500-9609-4a88cfb22160",
+              "rrf": 0.015625,
+              "branches": {
+                "sparse": {
+                  "rank": 4,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "ada99668-9808-55c8-b187-398e0365e403",
+              "rrf": 0.015384615384615385,
+              "branches": {
+                "sparse": {
+                  "rank": 5,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "rrf": 0.015151515151515152,
+              "branches": {
+                "sparse": {
+                  "rank": 6,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "rrf": 0.014925373134328358,
+              "branches": {
+                "sparse": {
+                  "rank": 7,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "fusion_candidates": [
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "rrf": 0.01639344262295082,
+              "branches": {
+                "sparse": {
+                  "rank": 1,
+                  "score": 11.87231159210205
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "rrf": 0.016129032258064516,
+              "branches": {
+                "sparse": {
+                  "rank": 2,
+                  "score": 4.653158187866211
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+              "rrf": 0.015873015873015872,
+              "branches": {
+                "sparse": {
+                  "rank": 3,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "33ec1efc-2b50-5500-9609-4a88cfb22160",
+              "rrf": 0.015625,
+              "branches": {
+                "sparse": {
+                  "rank": 4,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "ada99668-9808-55c8-b187-398e0365e403",
+              "rrf": 0.015384615384615385,
+              "branches": {
+                "sparse": {
+                  "rank": 5,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "rrf": 0.015151515151515152,
+              "branches": {
+                "sparse": {
+                  "rank": 6,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "rrf": 0.014925373134328358,
+              "branches": {
+                "sparse": {
+                  "rank": 7,
+                  "score": 1.6739764213562012
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "candidate_pool": [
+            "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+            "web:aa91a09e8f74e3b8ea028617a4fb9ee9293bdd4c825eb4b8d1e81dd5d2ab9df0",
+            "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+            "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+            "33ec1efc-2b50-5500-9609-4a88cfb22160",
+            "ada99668-9808-55c8-b187-398e0365e403",
+            "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+            "e906ecf1-525a-58b6-a1bf-f45211ac514d"
+          ],
+          "pool_decisions": [
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "web:aa91a09e8f74e3b8ea028617a4fb9ee9293bdd4c825eb4b8d1e81dd5d2ab9df0",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "33ec1efc-2b50-5500-9609-4a88cfb22160",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "ada99668-9808-55c8-b187-398e0365e403",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            }
+          ]
+        },
+        "online": {
+          "searches": [
+            {
+              "query": "120亿元与130亿元能互相替代吗？",
+              "results": [
+                {
+                  "url": "https://fixture.example/case-1",
+                  "title": "合成网页 fixture 1",
+                  "snippet": "这是显式测试替身的发现摘要，不是真实搜索结果。"
+                }
+              ],
+              "provider": "snapshot_replay",
+              "usage": null
+            }
+          ],
+          "pages": [
+            {
+              "url": "https://fixture.example/case-1",
+              "title": "合成网页 fixture 1",
+              "read_status": "body_read",
+              "id": "web:aa91a09e8f74e3b8ea028617a4fb9ee9293bdd4c825eb4b8d1e81dd5d2ab9df0",
+              "fetched_at": "2026-10-11T00:00:00+00:00",
+              "published_at": null,
+              "truncated": false
+            }
+          ],
+          "citation_validation": "snapshot_existence_and_scope_not_semantic_support"
+        },
+        "tool_trace": [
+          {
+            "tool": "search_web",
+            "input": {
+              "query": "120亿元与130亿元能互相替代吗？"
+            },
+            "status": "ok",
+            "result_count": 1,
+            "elapsed_ms": 0
+          },
+          {
+            "tool": "read_page",
+            "input": {
+              "url": "https://fixture.example/case-1"
+            },
+            "status": "ok",
+            "result_count": 1,
+            "elapsed_ms": 0
+          }
+        ],
+        "context": {
+          "status": "selected",
+          "unit": "UTF8_bytes",
+          "budget": 3000,
+          "used": 2604,
+          "candidate_count": 8,
+          "decisions": [
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "web:aa91a09e8f74e3b8ea028617a4fb9ee9293bdd4c825eb4b8d1e81dd5d2ab9df0",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "3500d42e-a7ae-541b-87b5-3be31d045f4f",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "33ec1efc-2b50-5500-9609-4a88cfb22160",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "ada99668-9808-55c8-b187-398e0365e403",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "method": "model_evidence_JSON_UTF8_bytes_v2"
+        },
+        "fallback_used": false,
+        "model_calls": [],
+        "model_request_budget": [],
+        "model_budget": {
+          "purpose": "interactive",
+          "limit_calls": 40,
+          "used_calls": 0
+        },
+        "elapsed_ms": 16,
+        "cost": {
+          "value": null,
+          "status": "no_cloud_calls"
+        }
+      },
+      "citation_metrics": {
+        "citation_scope_validity": null,
+        "semantic_support": "not_judged"
+      },
+      "latency_ms": 16,
+      "usage": [],
+      "cost": {
+        "value": null,
+        "status": "no_cloud_calls"
+      },
+      "failure_cases": [],
+      "replay_searches": 1,
+      "replay_reads": 1
+    },
+    {
+      "id": "w01",
+      "scope": "combined",
+      "workflow": "agent",
+      "reference": "不能默认替代，应并列来源和未说明的口径。",
+      "task_completion": null,
+      "human_citation_support": null,
+      "semantic_support": "not_judged",
+      "status": "not_run_offline",
+      "reason": "autonomous_tool_choice_requires_real_model"
+    },
+    {
+      "id": "w02",
+      "scope": "documents",
+      "workflow": "fixed",
+      "reference": "不能，仍为预测；网页与文档都不证明实际收入。",
+      "task_completion": null,
+      "human_citation_support": null,
+      "semantic_support": "not_judged",
+      "status": "offline_extracts",
+      "run": {
+        "run_id": "f2070bbe-1e20-45e8-9631-6391707790a4",
+        "request_id": null,
+        "question": "140亿元能称为2026年实际收入吗？",
+        "mode": "offline",
+        "snapshot": {
+          "documents": [
+            "56fe829b-f4d5-43c3-910a-63d6cf3303b4"
+          ],
+          "generations": [
+            "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b"
+          ],
+          "versions": [
+            "12ead991-66b6-5c88-97a1-5061510238e8"
+          ],
+          "corpus_revision": 1,
+          "collection": "online_ac5c6e2890_543a8ee761ada63f",
+          "contract": {
+            "parser": "m5-v3-html-dom-table-grid",
+            "chunker": "section-900-v2-bounded-table",
+            "sparse": "jieba-0.42.1-bm25-k1=1.5-b=0-qdrant-idf-v1",
+            "mode": "offline",
+            "embedding": "openai/text-embedding-3-small",
+            "revision": "provider-default",
+            "dimension": 1536,
+            "distance": "Cosine",
+            "normalization": "qdrant-cosine",
+            "endpoint": null,
+            "chunk_contract": {
+              "strategy": "legacy",
+              "size": 900,
+              "overlap": 0,
+              "version": "boundary-v1"
+            },
+            "embedding_input": {
+              "profile": "symmetric",
+              "query_prefix": "",
+              "document_prefix": "",
+              "version": "purpose-v1"
+            }
+          },
+          "idf_scope": "whole_collection_including_retained_and_partial_generations"
+        },
+        "evidence": [
+          {
+            "locations": [
+              {
+                "line_start": 37,
+                "line_end": 37
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "预测与观点"
+            ],
+            "block": 18,
+            "text": "管理层预测2026年收入为140亿元人民币，口径为全年合并预测。该预测不能作为2026年实际收入。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 49,
+              "unit": "block_characters"
+            },
+            "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 25,
+                "line_end": 25
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "财务口径"
+            ],
+            "block": 12,
+            "text": "星河公司2025年研发投入为18亿元人民币，均为全年合并口径历史数据。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 35,
+              "unit": "block_characters"
+            },
+            "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 41,
+                "line_end": 41
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "口径冲突"
+            ],
+            "block": 20,
+            "text": "某媒体称星河公司2025年收入为130亿元人民币，但未说明合并范围。该媒体数字与公司披露不同，不能直接替代120亿元的全年合并历史数据。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 68,
+              "unit": "block_characters"
+            },
+            "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 23,
+                "line_end": 23
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "财务口径"
+            ],
+            "block": 11,
+            "text": "星河公司2025年收入为120亿元人民币，2024年收入为100亿元人民币，均为全年合并口径历史数据。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 51,
+              "unit": "block_characters"
+            },
+            "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 19,
+                "line_end": 19
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "交付影响"
+            ],
+            "block": 9,
+            "text": "晶圆供应中断影响 Aurora-X 芯片交付。星河公司2025年第三季度交付延期三周；第四季度恢复正常交付。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 54,
+              "unit": "block_characters"
+            },
+            "id": "e840142b-ca06-596f-85a6-3f7b446c62c9",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 15,
+                "line_end": 15
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "供应商风险"
+            ],
+            "block": 7,
+            "text": "云晶材料公司在2025年第三季度因洪水停产两周，导致晶圆供应中断。这里披露的是历史事实，不是预测。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 49,
+              "unit": "block_characters"
+            },
+            "id": "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 33,
+                "line_end": 33
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "风险措施"
+            ],
+            "block": 16,
+            "text": "星河公司在2025年第四季度启动第二供应商认证；截至年末认证尚未完成。原文明示风险为单一供应商依赖。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 50,
+              "unit": "block_characters"
+            },
+            "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 7,
+                "line_end": 7
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "公司与产品"
+            ],
+            "block": 3,
+            "text": "星河公司生产 Aurora-X 芯片，芯片面向工业传感器。星河公司总部位于苏州，成立于2018年。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 49,
+              "unit": "block_characters"
+            },
+            "id": "9d28f86c-5c70-574f-86cd-5dd487c1da5a",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          }
+        ],
+        "claims": [],
+        "status": "offline_extracts",
+        "warnings": [
+          "离线词项检索与原文摘录；未调用 embedding 或生成模型，不代表问题已得到回答。"
+        ],
+        "steps": [
+          "固定文档版本/索引代次/语料修订号",
+          "独立召回",
+          "RRF 融合",
+          "引用范围与上下文预算检查"
+        ],
+        "usage": [],
+        "created_at": "2026-10-11T12:18:09.523706+00:00",
+        "scope": "documents",
+        "workflow": "fixed",
+        "policy": {
+          "prompt": "online-citations-v1",
+          "controller": "round-rrf-bounded-input-v2",
+          "rerank_input": "equal_text_caps_full_request_bytes_v1",
+          "rrf_k": 60,
+          "branch_limit": 20,
+          "fused_limit": 24,
+          "top_k": 8,
+          "context_tokens": 3000,
+          "evidence_budget_bytes": 3000,
+          "model_request_budget_bytes": 64000,
+          "scope": "documents",
+          "workflow": "fixed",
+          "agent_max_rounds": 2,
+          "search_provider": "disabled",
+          "search_max_results": 5,
+          "network_limits": {
+            "search_calls": 3,
+            "search_seconds": 10,
+            "page_seconds": 10,
+            "page_bytes": 1000000,
+            "page_text_chars": 30000,
+            "pages": 6,
+            "redirects": 3,
+            "concurrency": 3
+          },
+          "generation_max_tokens": 1200,
+          "budget_method": "model_evidence_JSON_UTF8_bytes_v2",
+          "generation_model": "openai/gpt-4o-mini",
+          "retries": 1,
+          "citation_validation": "existence_and_scope_not_entailment",
+          "route": "qa",
+          "strategy": "hybrid",
+          "graph": "facts-v1",
+          "summary": "summary-v1",
+          "graph_storage": "df33dda8-0ca4-57f7-b2eb-2c2139ba215d",
+          "rerank_requested": false,
+          "rerank": null,
+          "fallback": null,
+          "generation_endpoint": null
+        },
+        "queue_ms": 0,
+        "cache": {
+          "status": "bypass"
+        },
+        "route": "qa",
+        "strategy": "hybrid",
+        "retrieval": {
+          "branches": {
+            "sparse": [
+              {
+                "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+                "score": 12.486246109008789,
+                "rank": 1,
+                "query_rank": 1
+              },
+              {
+                "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+                "score": 2.9802281856536865,
+                "rank": 2,
+                "query_rank": 2
+              },
+              {
+                "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+                "score": 2.391394853591919,
+                "rank": 3,
+                "query_rank": 3
+              },
+              {
+                "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+                "score": 2.391394853591919,
+                "rank": 4,
+                "query_rank": 4
+              },
+              {
+                "id": "e840142b-ca06-596f-85a6-3f7b446c62c9",
+                "score": 1.3062516450881958,
+                "rank": 5,
+                "query_rank": 5
+              },
+              {
+                "id": "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+                "score": 1.3062516450881958,
+                "rank": 6,
+                "query_rank": 6
+              },
+              {
+                "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+                "score": 1.3062516450881958,
+                "rank": 7,
+                "query_rank": 7
+              },
+              {
+                "id": "9d28f86c-5c70-574f-86cd-5dd487c1da5a",
+                "score": 1.3062516450881958,
+                "rank": 8,
+                "query_rank": 8
+              }
+            ]
+          },
+          "fused": [
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "rrf": 0.01639344262295082,
+              "branches": {
+                "sparse": {
+                  "rank": 1,
+                  "score": 12.486246109008789
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "rrf": 0.016129032258064516,
+              "branches": {
+                "sparse": {
+                  "rank": 2,
+                  "score": 2.9802281856536865
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "rrf": 0.015873015873015872,
+              "branches": {
+                "sparse": {
+                  "rank": 3,
+                  "score": 2.391394853591919
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "rrf": 0.015625,
+              "branches": {
+                "sparse": {
+                  "rank": 4,
+                  "score": 2.391394853591919
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "e840142b-ca06-596f-85a6-3f7b446c62c9",
+              "rrf": 0.015384615384615385,
+              "branches": {
+                "sparse": {
+                  "rank": 5,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+              "rrf": 0.015151515151515152,
+              "branches": {
+                "sparse": {
+                  "rank": 6,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "rrf": 0.014925373134328358,
+              "branches": {
+                "sparse": {
+                  "rank": 7,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "9d28f86c-5c70-574f-86cd-5dd487c1da5a",
+              "rrf": 0.014705882352941176,
+              "branches": {
+                "sparse": {
+                  "rank": 8,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "fusion_candidates": [
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "rrf": 0.01639344262295082,
+              "branches": {
+                "sparse": {
+                  "rank": 1,
+                  "score": 12.486246109008789
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "rrf": 0.016129032258064516,
+              "branches": {
+                "sparse": {
+                  "rank": 2,
+                  "score": 2.9802281856536865
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "rrf": 0.015873015873015872,
+              "branches": {
+                "sparse": {
+                  "rank": 3,
+                  "score": 2.391394853591919
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "rrf": 0.015625,
+              "branches": {
+                "sparse": {
+                  "rank": 4,
+                  "score": 2.391394853591919
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "e840142b-ca06-596f-85a6-3f7b446c62c9",
+              "rrf": 0.015384615384615385,
+              "branches": {
+                "sparse": {
+                  "rank": 5,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+              "rrf": 0.015151515151515152,
+              "branches": {
+                "sparse": {
+                  "rank": 6,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "rrf": 0.014925373134328358,
+              "branches": {
+                "sparse": {
+                  "rank": 7,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "9d28f86c-5c70-574f-86cd-5dd487c1da5a",
+              "rrf": 0.014705882352941176,
+              "branches": {
+                "sparse": {
+                  "rank": 8,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "candidate_pool": [
+            "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+            "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+            "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+            "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+            "e840142b-ca06-596f-85a6-3f7b446c62c9",
+            "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+            "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+            "9d28f86c-5c70-574f-86cd-5dd487c1da5a"
+          ],
+          "pool_decisions": [
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "e840142b-ca06-596f-85a6-3f7b446c62c9",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "9d28f86c-5c70-574f-86cd-5dd487c1da5a",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            }
+          ]
+        },
+        "context": {
+          "status": "selected",
+          "unit": "UTF8_bytes",
+          "budget": 3000,
+          "used": 2950,
+          "candidate_count": 8,
+          "decisions": [
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "e840142b-ca06-596f-85a6-3f7b446c62c9",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "9d28f86c-5c70-574f-86cd-5dd487c1da5a",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "method": "model_evidence_JSON_UTF8_bytes_v2"
+        },
+        "fallback_used": false,
+        "model_calls": [],
+        "model_request_budget": [],
+        "model_budget": {
+          "purpose": "interactive",
+          "limit_calls": 40,
+          "used_calls": 0
+        },
+        "elapsed_ms": 15,
+        "cost": {
+          "value": null,
+          "status": "no_cloud_calls"
+        }
+      },
+      "citation_metrics": {
+        "citation_scope_validity": null,
+        "semantic_support": "not_judged"
+      },
+      "latency_ms": 15,
+      "usage": [],
+      "cost": {
+        "value": null,
+        "status": "no_cloud_calls"
+      },
+      "failure_cases": [],
+      "replay_searches": 0,
+      "replay_reads": 0
+    },
+    {
+      "id": "w02",
+      "scope": "combined",
+      "workflow": "fixed",
+      "reference": "不能，仍为预测；网页与文档都不证明实际收入。",
+      "task_completion": null,
+      "human_citation_support": null,
+      "semantic_support": "not_judged",
+      "status": "offline_extracts",
+      "run": {
+        "run_id": "ee59d429-c39a-47b3-98da-2e03ef12b058",
+        "request_id": null,
+        "question": "140亿元能称为2026年实际收入吗？",
+        "mode": "offline",
+        "snapshot": {
+          "documents": [
+            "56fe829b-f4d5-43c3-910a-63d6cf3303b4"
+          ],
+          "generations": [
+            "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b"
+          ],
+          "versions": [
+            "12ead991-66b6-5c88-97a1-5061510238e8"
+          ],
+          "corpus_revision": 1,
+          "collection": "online_ac5c6e2890_543a8ee761ada63f",
+          "contract": {
+            "parser": "m5-v3-html-dom-table-grid",
+            "chunker": "section-900-v2-bounded-table",
+            "sparse": "jieba-0.42.1-bm25-k1=1.5-b=0-qdrant-idf-v1",
+            "mode": "offline",
+            "embedding": "openai/text-embedding-3-small",
+            "revision": "provider-default",
+            "dimension": 1536,
+            "distance": "Cosine",
+            "normalization": "qdrant-cosine",
+            "endpoint": null,
+            "chunk_contract": {
+              "strategy": "legacy",
+              "size": 900,
+              "overlap": 0,
+              "version": "boundary-v1"
+            },
+            "embedding_input": {
+              "profile": "symmetric",
+              "query_prefix": "",
+              "document_prefix": "",
+              "version": "purpose-v1"
+            }
+          },
+          "idf_scope": "whole_collection_including_retained_and_partial_generations"
+        },
+        "evidence": [
+          {
+            "locations": [
+              {
+                "line_start": 37,
+                "line_end": 37
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "预测与观点"
+            ],
+            "block": 18,
+            "text": "管理层预测2026年收入为140亿元人民币，口径为全年合并预测。该预测不能作为2026年实际收入。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 49,
+              "unit": "block_characters"
+            },
+            "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "id": "web:db476628d2d03f0ef10957169cdf7c0161f9529c58e92c4f4dc27c17a27364bc",
+            "source_type": "web",
+            "url": "https://fixture.example/case-2",
+            "discovered_url": "https://fixture.example/case-2",
+            "title": "合成网页 fixture 2",
+            "fetched_at": "2026-10-11T00:00:00+00:00",
+            "published_at": null,
+            "published_at_basis": null,
+            "search_published_at": null,
+            "text": "管理层预测2026年收入140亿元，这是预测，不是实际收入。",
+            "read_status": "body_read",
+            "truncated": false,
+            "body_chars": 30,
+            "html_sha256": "e81647182c9cbfc13d80289246e9a8fbaa2f9e27c17f85f6dddf8dc56b9b47f2",
+            "body_sha256": "12f7353631bf0642a090eeb4d2ce7d648c08e1b8cbbc110fa1852431aa8ef1db",
+            "headings": [],
+            "locations": [
+              {
+                "url": "https://fixture.example/case-2"
+              }
+            ],
+            "redirects": [],
+            "provenance": "synthetic_fixture_not_live_page"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 25,
+                "line_end": 25
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "财务口径"
+            ],
+            "block": 12,
+            "text": "星河公司2025年研发投入为18亿元人民币，均为全年合并口径历史数据。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 35,
+              "unit": "block_characters"
+            },
+            "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 41,
+                "line_end": 41
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "口径冲突"
+            ],
+            "block": 20,
+            "text": "某媒体称星河公司2025年收入为130亿元人民币，但未说明合并范围。该媒体数字与公司披露不同，不能直接替代120亿元的全年合并历史数据。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 68,
+              "unit": "block_characters"
+            },
+            "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 23,
+                "line_end": 23
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "财务口径"
+            ],
+            "block": 11,
+            "text": "星河公司2025年收入为120亿元人民币，2024年收入为100亿元人民币，均为全年合并口径历史数据。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 51,
+              "unit": "block_characters"
+            },
+            "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 19,
+                "line_end": 19
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "交付影响"
+            ],
+            "block": 9,
+            "text": "晶圆供应中断影响 Aurora-X 芯片交付。星河公司2025年第三季度交付延期三周；第四季度恢复正常交付。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 54,
+              "unit": "block_characters"
+            },
+            "id": "e840142b-ca06-596f-85a6-3f7b446c62c9",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 15,
+                "line_end": 15
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "供应商风险"
+            ],
+            "block": 7,
+            "text": "云晶材料公司在2025年第三季度因洪水停产两周，导致晶圆供应中断。这里披露的是历史事实，不是预测。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 49,
+              "unit": "block_characters"
+            },
+            "id": "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 33,
+                "line_end": 33
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "风险措施"
+            ],
+            "block": 16,
+            "text": "星河公司在2025年第四季度启动第二供应商认证；截至年末认证尚未完成。原文明示风险为单一供应商依赖。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 50,
+              "unit": "block_characters"
+            },
+            "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          }
+        ],
+        "claims": [],
+        "status": "offline_extracts",
+        "warnings": [
+          "离线词项检索与原文摘录；未调用 embedding 或生成模型，不代表问题已得到回答。"
+        ],
+        "steps": [
+          "固定文档版本/索引代次/语料修订号",
+          "独立召回",
+          "RRF 融合",
+          "引用范围与上下文预算检查"
+        ],
+        "usage": [],
+        "created_at": "2026-10-11T12:18:09.534309+00:00",
+        "scope": "combined",
+        "workflow": "fixed",
+        "policy": {
+          "prompt": "online-citations-v1",
+          "controller": "round-rrf-bounded-input-v2",
+          "rerank_input": "equal_text_caps_full_request_bytes_v1",
+          "rrf_k": 60,
+          "branch_limit": 20,
+          "fused_limit": 24,
+          "top_k": 8,
+          "context_tokens": 3000,
+          "evidence_budget_bytes": 3000,
+          "model_request_budget_bytes": 64000,
+          "scope": "combined",
+          "workflow": "fixed",
+          "agent_max_rounds": 2,
+          "search_provider": "disabled",
+          "search_max_results": 5,
+          "network_limits": {
+            "search_calls": 3,
+            "search_seconds": 10,
+            "page_seconds": 10,
+            "page_bytes": 1000000,
+            "page_text_chars": 30000,
+            "pages": 6,
+            "redirects": 3,
+            "concurrency": 3
+          },
+          "generation_max_tokens": 1200,
+          "budget_method": "model_evidence_JSON_UTF8_bytes_v2",
+          "generation_model": "openai/gpt-4o-mini",
+          "retries": 1,
+          "citation_validation": "existence_and_scope_not_entailment",
+          "route": "qa",
+          "strategy": "hybrid",
+          "graph": "facts-v1",
+          "summary": "summary-v1",
+          "graph_storage": "df33dda8-0ca4-57f7-b2eb-2c2139ba215d",
+          "rerank_requested": false,
+          "rerank": null,
+          "fallback": null,
+          "generation_endpoint": null
+        },
+        "queue_ms": 0,
+        "cache": {
+          "status": "bypass"
+        },
+        "route": "qa",
+        "strategy": "hybrid",
+        "retrieval": {
+          "branches": {
+            "sparse": [
+              {
+                "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+                "score": 12.486246109008789,
+                "rank": 1,
+                "query_rank": 1
+              },
+              {
+                "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+                "score": 2.9802281856536865,
+                "rank": 2,
+                "query_rank": 2
+              },
+              {
+                "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+                "score": 2.391394853591919,
+                "rank": 3,
+                "query_rank": 3
+              },
+              {
+                "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+                "score": 2.391394853591919,
+                "rank": 4,
+                "query_rank": 4
+              },
+              {
+                "id": "e840142b-ca06-596f-85a6-3f7b446c62c9",
+                "score": 1.3062516450881958,
+                "rank": 5,
+                "query_rank": 5
+              },
+              {
+                "id": "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+                "score": 1.3062516450881958,
+                "rank": 6,
+                "query_rank": 6
+              },
+              {
+                "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+                "score": 1.3062516450881958,
+                "rank": 7,
+                "query_rank": 7
+              },
+              {
+                "id": "9d28f86c-5c70-574f-86cd-5dd487c1da5a",
+                "score": 1.3062516450881958,
+                "rank": 8,
+                "query_rank": 8
+              }
+            ]
+          },
+          "fused": [
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "rrf": 0.01639344262295082,
+              "branches": {
+                "sparse": {
+                  "rank": 1,
+                  "score": 12.486246109008789
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "rrf": 0.016129032258064516,
+              "branches": {
+                "sparse": {
+                  "rank": 2,
+                  "score": 2.9802281856536865
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "rrf": 0.015873015873015872,
+              "branches": {
+                "sparse": {
+                  "rank": 3,
+                  "score": 2.391394853591919
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "rrf": 0.015625,
+              "branches": {
+                "sparse": {
+                  "rank": 4,
+                  "score": 2.391394853591919
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "e840142b-ca06-596f-85a6-3f7b446c62c9",
+              "rrf": 0.015384615384615385,
+              "branches": {
+                "sparse": {
+                  "rank": 5,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+              "rrf": 0.015151515151515152,
+              "branches": {
+                "sparse": {
+                  "rank": 6,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "rrf": 0.014925373134328358,
+              "branches": {
+                "sparse": {
+                  "rank": 7,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "9d28f86c-5c70-574f-86cd-5dd487c1da5a",
+              "rrf": 0.014705882352941176,
+              "branches": {
+                "sparse": {
+                  "rank": 8,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "final_top_k",
+              "reason": "final_evidence_limit"
+            }
+          ],
+          "fusion_candidates": [
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "rrf": 0.01639344262295082,
+              "branches": {
+                "sparse": {
+                  "rank": 1,
+                  "score": 12.486246109008789
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "rrf": 0.016129032258064516,
+              "branches": {
+                "sparse": {
+                  "rank": 2,
+                  "score": 2.9802281856536865
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "rrf": 0.015873015873015872,
+              "branches": {
+                "sparse": {
+                  "rank": 3,
+                  "score": 2.391394853591919
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "rrf": 0.015625,
+              "branches": {
+                "sparse": {
+                  "rank": 4,
+                  "score": 2.391394853591919
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "e840142b-ca06-596f-85a6-3f7b446c62c9",
+              "rrf": 0.015384615384615385,
+              "branches": {
+                "sparse": {
+                  "rank": 5,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+              "rrf": 0.015151515151515152,
+              "branches": {
+                "sparse": {
+                  "rank": 6,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "rrf": 0.014925373134328358,
+              "branches": {
+                "sparse": {
+                  "rank": 7,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "9d28f86c-5c70-574f-86cd-5dd487c1da5a",
+              "rrf": 0.014705882352941176,
+              "branches": {
+                "sparse": {
+                  "rank": 8,
+                  "score": 1.3062516450881958
+                }
+              },
+              "selection": "final_top_k",
+              "reason": "final_evidence_limit"
+            }
+          ],
+          "candidate_pool": [
+            "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+            "web:db476628d2d03f0ef10957169cdf7c0161f9529c58e92c4f4dc27c17a27364bc",
+            "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+            "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+            "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+            "e840142b-ca06-596f-85a6-3f7b446c62c9",
+            "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+            "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+            "9d28f86c-5c70-574f-86cd-5dd487c1da5a"
+          ],
+          "pool_decisions": [
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "web:db476628d2d03f0ef10957169cdf7c0161f9529c58e92c4f4dc27c17a27364bc",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "e840142b-ca06-596f-85a6-3f7b446c62c9",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "9d28f86c-5c70-574f-86cd-5dd487c1da5a",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            }
+          ]
+        },
+        "online": {
+          "searches": [
+            {
+              "query": "140亿元能称为2026年实际收入吗？",
+              "results": [
+                {
+                  "url": "https://fixture.example/case-2",
+                  "title": "合成网页 fixture 2",
+                  "snippet": "这是显式测试替身的发现摘要，不是真实搜索结果。"
+                }
+              ],
+              "provider": "snapshot_replay",
+              "usage": null
+            }
+          ],
+          "pages": [
+            {
+              "url": "https://fixture.example/case-2",
+              "title": "合成网页 fixture 2",
+              "read_status": "body_read",
+              "id": "web:db476628d2d03f0ef10957169cdf7c0161f9529c58e92c4f4dc27c17a27364bc",
+              "fetched_at": "2026-10-11T00:00:00+00:00",
+              "published_at": null,
+              "truncated": false
+            }
+          ],
+          "citation_validation": "snapshot_existence_and_scope_not_semantic_support"
+        },
+        "tool_trace": [
+          {
+            "tool": "search_web",
+            "input": {
+              "query": "140亿元能称为2026年实际收入吗？"
+            },
+            "status": "ok",
+            "result_count": 1,
+            "elapsed_ms": 0
+          },
+          {
+            "tool": "read_page",
+            "input": {
+              "url": "https://fixture.example/case-2"
+            },
+            "status": "ok",
+            "result_count": 1,
+            "elapsed_ms": 0
+          }
+        ],
+        "context": {
+          "status": "selected",
+          "unit": "UTF8_bytes",
+          "budget": 3000,
+          "used": 2968,
+          "candidate_count": 9,
+          "decisions": [
+            {
+              "id": "e906ecf1-525a-58b6-a1bf-f45211ac514d",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "web:db476628d2d03f0ef10957169cdf7c0161f9529c58e92c4f4dc27c17a27364bc",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6652d759-e94d-578e-b486-c76c2cbbd3f1",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "b778e15d-f8fa-5ae4-8cc0-65b927cb7069",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "6ba950a2-be24-5ebb-a1a1-cddbc6a0d0e7",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "e840142b-ca06-596f-85a6-3f7b446c62c9",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "7874d5e9-2322-5386-a54b-0ae236e6c93a",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "9d28f86c-5c70-574f-86cd-5dd487c1da5a",
+              "selection": "final_top_k",
+              "reason": "final_evidence_limit"
+            }
+          ],
+          "method": "model_evidence_JSON_UTF8_bytes_v2"
+        },
+        "fallback_used": false,
+        "model_calls": [],
+        "model_request_budget": [],
+        "model_budget": {
+          "purpose": "interactive",
+          "limit_calls": 40,
+          "used_calls": 0
+        },
+        "elapsed_ms": 0,
+        "cost": {
+          "value": null,
+          "status": "no_cloud_calls"
+        }
+      },
+      "citation_metrics": {
+        "citation_scope_validity": null,
+        "semantic_support": "not_judged"
+      },
+      "latency_ms": 0,
+      "usage": [],
+      "cost": {
+        "value": null,
+        "status": "no_cloud_calls"
+      },
+      "failure_cases": [],
+      "replay_searches": 1,
+      "replay_reads": 1
+    },
+    {
+      "id": "w02",
+      "scope": "combined",
+      "workflow": "agent",
+      "reference": "不能，仍为预测；网页与文档都不证明实际收入。",
+      "task_completion": null,
+      "human_citation_support": null,
+      "semantic_support": "not_judged",
+      "status": "not_run_offline",
+      "reason": "autonomous_tool_choice_requires_real_model"
+    },
+    {
+      "id": "w03",
+      "scope": "documents",
+      "workflow": "fixed",
+      "reference": "2025年年末资料称未完成；更新缺少日期，不能反推2025年已经完成。",
+      "task_completion": null,
+      "human_citation_support": null,
+      "semantic_support": "not_judged",
+      "status": "offline_extracts",
+      "run": {
+        "run_id": "669b5365-ec49-49d6-b22e-8d2c488e80e0",
+        "request_id": null,
+        "question": "第二供应商认证年末完成了吗？",
+        "mode": "offline",
+        "snapshot": {
+          "documents": [
+            "56fe829b-f4d5-43c3-910a-63d6cf3303b4"
+          ],
+          "generations": [
+            "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b"
+          ],
+          "versions": [
+            "12ead991-66b6-5c88-97a1-5061510238e8"
+          ],
+          "corpus_revision": 1,
+          "collection": "online_ac5c6e2890_543a8ee761ada63f",
+          "contract": {
+            "parser": "m5-v3-html-dom-table-grid",
+            "chunker": "section-900-v2-bounded-table",
+            "sparse": "jieba-0.42.1-bm25-k1=1.5-b=0-qdrant-idf-v1",
+            "mode": "offline",
+            "embedding": "openai/text-embedding-3-small",
+            "revision": "provider-default",
+            "dimension": 1536,
+            "distance": "Cosine",
+            "normalization": "qdrant-cosine",
+            "endpoint": null,
+            "chunk_contract": {
+              "strategy": "legacy",
+              "size": 900,
+              "overlap": 0,
+              "version": "boundary-v1"
+            },
+            "embedding_input": {
+              "profile": "symmetric",
+              "query_prefix": "",
+              "document_prefix": "",
+              "version": "purpose-v1"
+            }
+          },
+          "idf_scope": "whole_collection_including_retained_and_partial_generations"
+        },
+        "evidence": [
+          {
+            "locations": [
+              {
+                "line_start": 33,
+                "line_end": 33
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "风险措施"
+            ],
+            "block": 16,
+            "text": "星河公司在2025年第四季度启动第二供应商认证；截至年末认证尚未完成。原文明示风险为单一供应商依赖。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 50,
+              "unit": "block_characters"
+            },
+            "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 13,
+                "line_end": 13
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "供应商风险"
+            ],
+            "block": 6,
+            "text": "## 供应商风险",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 8,
+              "unit": "block_characters"
+            },
+            "id": "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 11,
+                "line_end": 11
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "采购与供应"
+            ],
+            "block": 5,
+            "text": "Aurora-X 芯片依赖云晶材料公司供应的晶圆。云晶材料公司位于无锡，是该晶圆的唯一供应商。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 47,
+              "unit": "block_characters"
+            },
+            "id": "f448fd86-a3d2-5df3-927f-5703956b3d86",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          }
+        ],
+        "claims": [],
+        "status": "offline_extracts",
+        "warnings": [
+          "离线词项检索与原文摘录；未调用 embedding 或生成模型，不代表问题已得到回答。"
+        ],
+        "steps": [
+          "固定文档版本/索引代次/语料修订号",
+          "独立召回",
+          "RRF 融合",
+          "引用范围与上下文预算检查"
+        ],
+        "usage": [],
+        "created_at": "2026-10-11T12:18:09.541003+00:00",
+        "scope": "documents",
+        "workflow": "fixed",
+        "policy": {
+          "prompt": "online-citations-v1",
+          "controller": "round-rrf-bounded-input-v2",
+          "rerank_input": "equal_text_caps_full_request_bytes_v1",
+          "rrf_k": 60,
+          "branch_limit": 20,
+          "fused_limit": 24,
+          "top_k": 8,
+          "context_tokens": 3000,
+          "evidence_budget_bytes": 3000,
+          "model_request_budget_bytes": 64000,
+          "scope": "documents",
+          "workflow": "fixed",
+          "agent_max_rounds": 2,
+          "search_provider": "disabled",
+          "search_max_results": 5,
+          "network_limits": {
+            "search_calls": 3,
+            "search_seconds": 10,
+            "page_seconds": 10,
+            "page_bytes": 1000000,
+            "page_text_chars": 30000,
+            "pages": 6,
+            "redirects": 3,
+            "concurrency": 3
+          },
+          "generation_max_tokens": 1200,
+          "budget_method": "model_evidence_JSON_UTF8_bytes_v2",
+          "generation_model": "openai/gpt-4o-mini",
+          "retries": 1,
+          "citation_validation": "existence_and_scope_not_entailment",
+          "route": "qa",
+          "strategy": "hybrid",
+          "graph": "facts-v1",
+          "summary": "summary-v1",
+          "graph_storage": "df33dda8-0ca4-57f7-b2eb-2c2139ba215d",
+          "rerank_requested": false,
+          "rerank": null,
+          "fallback": null,
+          "generation_endpoint": null
+        },
+        "queue_ms": 0,
+        "cache": {
+          "status": "bypass"
+        },
+        "route": "qa",
+        "strategy": "hybrid",
+        "retrieval": {
+          "branches": {
+            "sparse": [
+              {
+                "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+                "score": 15.029023170471191,
+                "rank": 1,
+                "query_rank": 1
+              },
+              {
+                "id": "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+                "score": 1.925290822982788,
+                "rank": 2,
+                "query_rank": 2
+              },
+              {
+                "id": "f448fd86-a3d2-5df3-927f-5703956b3d86",
+                "score": 1.925290822982788,
+                "rank": 3,
+                "query_rank": 3
+              }
+            ]
+          },
+          "fused": [
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "rrf": 0.01639344262295082,
+              "branches": {
+                "sparse": {
+                  "rank": 1,
+                  "score": 15.029023170471191
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+              "rrf": 0.016129032258064516,
+              "branches": {
+                "sparse": {
+                  "rank": 2,
+                  "score": 1.925290822982788
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "f448fd86-a3d2-5df3-927f-5703956b3d86",
+              "rrf": 0.015873015873015872,
+              "branches": {
+                "sparse": {
+                  "rank": 3,
+                  "score": 1.925290822982788
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "fusion_candidates": [
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "rrf": 0.01639344262295082,
+              "branches": {
+                "sparse": {
+                  "rank": 1,
+                  "score": 15.029023170471191
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+              "rrf": 0.016129032258064516,
+              "branches": {
+                "sparse": {
+                  "rank": 2,
+                  "score": 1.925290822982788
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "f448fd86-a3d2-5df3-927f-5703956b3d86",
+              "rrf": 0.015873015873015872,
+              "branches": {
+                "sparse": {
+                  "rank": 3,
+                  "score": 1.925290822982788
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "candidate_pool": [
+            "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+            "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+            "f448fd86-a3d2-5df3-927f-5703956b3d86"
+          ],
+          "pool_decisions": [
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            },
+            {
+              "id": "f448fd86-a3d2-5df3-927f-5703956b3d86",
+              "selection": "candidate",
+              "reason": "rrf_rank"
+            }
+          ]
+        },
+        "context": {
+          "status": "selected",
+          "unit": "UTF8_bytes",
+          "budget": 3000,
+          "used": 994,
+          "candidate_count": 3,
+          "decisions": [
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "f448fd86-a3d2-5df3-927f-5703956b3d86",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "method": "model_evidence_JSON_UTF8_bytes_v2"
+        },
+        "fallback_used": false,
+        "model_calls": [],
+        "model_request_budget": [],
+        "model_budget": {
+          "purpose": "interactive",
+          "limit_calls": 40,
+          "used_calls": 0
+        },
+        "elapsed_ms": 0,
+        "cost": {
+          "value": null,
+          "status": "no_cloud_calls"
+        }
+      },
+      "citation_metrics": {
+        "citation_scope_validity": null,
+        "semantic_support": "not_judged"
+      },
+      "latency_ms": 0,
+      "usage": [],
+      "cost": {
+        "value": null,
+        "status": "no_cloud_calls"
+      },
+      "failure_cases": [],
+      "replay_searches": 0,
+      "replay_reads": 0
+    },
+    {
+      "id": "w03",
+      "scope": "combined",
+      "workflow": "fixed",
+      "reference": "2025年年末资料称未完成；更新缺少日期，不能反推2025年已经完成。",
+      "task_completion": null,
+      "human_citation_support": null,
+      "semantic_support": "not_judged",
+      "status": "offline_extracts",
+      "run": {
+        "run_id": "d26c7a2a-0a42-481e-9ea7-174182e2f9a0",
+        "request_id": null,
+        "question": "第二供应商认证年末完成了吗？",
+        "mode": "offline",
+        "snapshot": {
+          "documents": [
+            "56fe829b-f4d5-43c3-910a-63d6cf3303b4"
+          ],
+          "generations": [
+            "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b"
+          ],
+          "versions": [
+            "12ead991-66b6-5c88-97a1-5061510238e8"
+          ],
+          "corpus_revision": 1,
+          "collection": "online_ac5c6e2890_543a8ee761ada63f",
+          "contract": {
+            "parser": "m5-v3-html-dom-table-grid",
+            "chunker": "section-900-v2-bounded-table",
+            "sparse": "jieba-0.42.1-bm25-k1=1.5-b=0-qdrant-idf-v1",
+            "mode": "offline",
+            "embedding": "openai/text-embedding-3-small",
+            "revision": "provider-default",
+            "dimension": 1536,
+            "distance": "Cosine",
+            "normalization": "qdrant-cosine",
+            "endpoint": null,
+            "chunk_contract": {
+              "strategy": "legacy",
+              "size": 900,
+              "overlap": 0,
+              "version": "boundary-v1"
+            },
+            "embedding_input": {
+              "profile": "symmetric",
+              "query_prefix": "",
+              "document_prefix": "",
+              "version": "purpose-v1"
+            }
+          },
+          "idf_scope": "whole_collection_including_retained_and_partial_generations"
+        },
+        "evidence": [
+          {
+            "locations": [
+              {
+                "line_start": 33,
+                "line_end": 33
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "风险措施"
+            ],
+            "block": 16,
+            "text": "星河公司在2025年第四季度启动第二供应商认证；截至年末认证尚未完成。原文明示风险为单一供应商依赖。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 50,
+              "unit": "block_characters"
+            },
+            "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "id": "web:8c68bbea189e581045a04727bebb74d5ffbcdf33a46d4fffa483c25028a9a239",
+            "source_type": "web",
+            "url": "https://fixture.example/case-3",
+            "discovered_url": "https://fixture.example/case-3",
+            "title": "合成网页 fixture 3",
+            "fetched_at": "2026-10-11T00:00:00+00:00",
+            "published_at": null,
+            "published_at_basis": null,
+            "search_published_at": null,
+            "text": "一份2026年更新称第二供应商已通过认证，但未说明通过日期。",
+            "read_status": "body_read",
+            "truncated": false,
+            "body_chars": 30,
+            "html_sha256": "646cf88a0dbde9eb56053585423adfe42c44fc812182a4aad3b9bb00d31a077a",
+            "body_sha256": "ef1f2d2ccb6b1e698b6c445d4edd426caa4405aaa24c7f4a362abd72fa50810b",
+            "headings": [],
+            "locations": [
+              {
+                "url": "https://fixture.example/case-3"
+              }
+            ],
+            "redirects": [],
+            "provenance": "synthetic_fixture_not_live_page"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 13,
+                "line_end": 13
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "供应商风险"
+            ],
+            "block": 6,
+            "text": "## 供应商风险",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 8,
+              "unit": "block_characters"
+            },
+            "id": "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          },
+          {
+            "locations": [
+              {
+                "line_start": 11,
+                "line_end": 11
+              }
+            ],
+            "headings": [
+              "星河产业链测试档案",
+              "采购与供应"
+            ],
+            "block": 5,
+            "text": "Aurora-X 芯片依赖云晶材料公司供应的晶圆。云晶材料公司位于无锡，是该晶圆的唯一供应商。",
+            "offset": 0,
+            "source_span": {
+              "start": 0,
+              "end": 47,
+              "unit": "block_characters"
+            },
+            "id": "f448fd86-a3d2-5df3-927f-5703956b3d86",
+            "generation": "3f9e319c-e9ef-559a-b8fc-0b6d3c37d51b",
+            "version": "12ead991-66b6-5c88-97a1-5061510238e8",
+            "document": "56fe829b-f4d5-43c3-910a-63d6cf3303b4",
+            "document_name": "supply-chain.md",
+            "source_type": "document"
+          }
+        ],
+        "claims": [],
+        "status": "offline_extracts",
+        "warnings": [
+          "离线词项检索与原文摘录；未调用 embedding 或生成模型，不代表问题已得到回答。"
+        ],
+        "steps": [
+          "固定文档版本/索引代次/语料修订号",
+          "独立召回",
+          "RRF 融合",
+          "引用范围与上下文预算检查"
+        ],
+        "usage": [],
+        "created_at": "2026-10-11T12:18:09.549789+00:00",
+        "scope": "combined",
+        "workflow": "fixed",
+        "policy": {
+          "prompt": "online-citations-v1",
+          "controller": "round-rrf-bounded-input-v2",
+          "rerank_input": "equal_text_caps_full_request_bytes_v1",
+          "rrf_k": 60,
+          "branch_limit": 20,
+          "fused_limit": 24,
+          "top_k": 8,
+          "context_tokens": 3000,
+          "evidence_budget_bytes": 3000,
+          "model_request_budget_bytes": 64000,
+          "scope": "combined",
+          "workflow": "fixed",
+          "agent_max_rounds": 2,
+          "search_provider": "disabled",
+          "search_max_results": 5,
+          "network_limits": {
+            "search_calls": 3,
+            "search_seconds": 10,
+            "page_seconds": 10,
+            "page_bytes": 1000000,
+            "page_text_chars": 30000,
+            "pages": 6,
+            "redirects": 3,
+            "concurrency": 3
+          },
+          "generation_max_tokens": 1200,
+          "budget_method": "model_evidence_JSON_UTF8_bytes_v2",
+          "generation_model": "openai/gpt-4o-mini",
+          "retries": 1,
+          "citation_validation": "existence_and_scope_not_entailment",
+          "route": "qa",
+          "strategy": "hybrid",
+          "graph": "facts-v1",
+          "summary": "summary-v1",
+          "graph_storage": "df33dda8-0ca4-57f7-b2eb-2c2139ba215d",
+          "rerank_requested": false,
+          "rerank": null,
+          "fallback": null,
+          "generation_endpoint": null
+        },
+        "queue_ms": 0,
+        "cache": {
+          "status": "bypass"
+        },
+        "route": "qa",
+        "strategy": "hybrid",
+        "retrieval": {
+          "branches": {
+            "sparse": [
+              {
+                "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+                "score": 15.029023170471191,
+                "rank": 1,
+                "query_rank": 1
+              },
+              {
+                "id": "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+                "score": 1.925290822982788,
+                "rank": 2,
+                "query_rank": 2
+              },
+              {
+                "id": "f448fd86-a3d2-5df3-927f-5703956b3d86",
+                "score": 1.925290822982788,
+                "rank": 3,
+                "query_rank": 3
+              }
+            ]
+          },
+          "fused": [
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "rrf": 0.01639344262295082,
+              "branches": {
+                "sparse": {
+                  "rank": 1,
+                  "score": 15.029023170471191
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+              "rrf": 0.016129032258064516,
+              "branches": {
+                "sparse": {
+                  "rank": 2,
+                  "score": 1.925290822982788
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "f448fd86-a3d2-5df3-927f-5703956b3d86",
+              "rrf": 0.015873015873015872,
+              "branches": {
+                "sparse": {
+                  "rank": 3,
+                  "score": 1.925290822982788
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "fusion_candidates": [
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "rrf": 0.01639344262295082,
+              "branches": {
+                "sparse": {
+                  "rank": 1,
+                  "score": 15.029023170471191
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+              "rrf": 0.016129032258064516,
+              "branches": {
+                "sparse": {
+                  "rank": 2,
+                  "score": 1.925290822982788
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "f448fd86-a3d2-5df3-927f-5703956b3d86",
+              "rrf": 0.015873015873015872,
+              "branches": {
+                "sparse": {
+                  "rank": 3,
+                  "score": 1.925290822982788
+                }
+              },
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "candidate_pool": [
+            "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+            "web:8c68bbea189e581045a04727bebb74d5ffbcdf33a46d4fffa483c25028a9a239",
+            "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+            "f448fd86-a3d2-5df3-927f-5703956b3d86"
+          ],
+          "pool_decisions": [
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "web:8c68bbea189e581045a04727bebb74d5ffbcdf33a46d4fffa483c25028a9a239",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            },
+            {
+              "id": "f448fd86-a3d2-5df3-927f-5703956b3d86",
+              "selection": "candidate",
+              "reason": "source_interleave_after_round_rrf"
+            }
+          ]
+        },
+        "online": {
+          "searches": [
+            {
+              "query": "第二供应商认证年末完成了吗？",
+              "results": [
+                {
+                  "url": "https://fixture.example/case-3",
+                  "title": "合成网页 fixture 3",
+                  "snippet": "这是显式测试替身的发现摘要，不是真实搜索结果。"
+                }
+              ],
+              "provider": "snapshot_replay",
+              "usage": null
+            }
+          ],
+          "pages": [
+            {
+              "url": "https://fixture.example/case-3",
+              "title": "合成网页 fixture 3",
+              "read_status": "body_read",
+              "id": "web:8c68bbea189e581045a04727bebb74d5ffbcdf33a46d4fffa483c25028a9a239",
+              "fetched_at": "2026-10-11T00:00:00+00:00",
+              "published_at": null,
+              "truncated": false
+            }
+          ],
+          "citation_validation": "snapshot_existence_and_scope_not_semantic_support"
+        },
+        "tool_trace": [
+          {
+            "tool": "search_web",
+            "input": {
+              "query": "第二供应商认证年末完成了吗？"
+            },
+            "status": "ok",
+            "result_count": 1,
+            "elapsed_ms": 0
+          },
+          {
+            "tool": "read_page",
+            "input": {
+              "url": "https://fixture.example/case-3"
+            },
+            "status": "ok",
+            "result_count": 1,
+            "elapsed_ms": 16
+          }
+        ],
+        "context": {
+          "status": "selected",
+          "unit": "UTF8_bytes",
+          "budget": 3000,
+          "used": 1375,
+          "candidate_count": 4,
+          "decisions": [
+            {
+              "id": "2a94c493-b835-5365-b4a1-1aeeef69daaa",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "web:8c68bbea189e581045a04727bebb74d5ffbcdf33a46d4fffa483c25028a9a239",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "a46b97ad-ef4c-5f52-bd92-47b7a374e6ab",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            },
+            {
+              "id": "f448fd86-a3d2-5df3-927f-5703956b3d86",
+              "selection": "selected",
+              "reason": "full_evidence_fits"
+            }
+          ],
+          "method": "model_evidence_JSON_UTF8_bytes_v2"
+        },
+        "fallback_used": false,
+        "model_calls": [],
+        "model_request_budget": [],
+        "model_budget": {
+          "purpose": "interactive",
+          "limit_calls": 40,
+          "used_calls": 0
+        },
+        "elapsed_ms": 16,
+        "cost": {
+          "value": null,
+          "status": "no_cloud_calls"
+        }
+      },
+      "citation_metrics": {
+        "citation_scope_validity": null,
+        "semantic_support": "not_judged"
+      },
+      "latency_ms": 16,
+      "usage": [],
+      "cost": {
+        "value": null,
+        "status": "no_cloud_calls"
+      },
+      "failure_cases": [],
+      "replay_searches": 1,
+      "replay_reads": 1
+    },
+    {
+      "id": "w03",
+      "scope": "combined",
+      "workflow": "agent",
+      "reference": "2025年年末资料称未完成；更新缺少日期，不能反推2025年已经完成。",
+      "task_completion": null,
+      "human_citation_support": null,
+      "semantic_support": "not_judged",
+      "status": "not_run_offline",
+      "reason": "autonomous_tool_choice_requires_real_model"
+    }
+  ],
+  "human_review": "pending",
+  "semantic_support": "not_judged",
+  "real_quality_validated": false,
+  "notes": [
+    "Replay fails for unrecorded queries; it never fabricates results or falls back to live network.",
+    "Offline agent is not run. Fixture replay validates plumbing, not real web search quality."
+  ],
+  "application_source_sha256": "83abab94438f23c980eef5bc174b2394ea5fd3fef49e1b043e6efbcf64fbdbb5",
+  "status": "completed_with_pending_semantic_and_human_review",
+  "model_meter": null,
+  "search_meter": {
+    "calls": 0,
+    "limit": 0
+  },
+  "contract": {
+    "parser": "m5-v3-html-dom-table-grid",
+    "chunker": "section-900-v2-bounded-table",
+    "sparse": "jieba-0.42.1-bm25-k1=1.5-b=0-qdrant-idf-v1",
+    "mode": "offline",
+    "embedding": "openai/text-embedding-3-small",
+    "revision": "provider-default",
+    "dimension": 1536,
+    "distance": "Cosine",
+    "normalization": "qdrant-cosine",
+    "endpoint": null,
+    "chunk_contract": {
+      "strategy": "legacy",
+      "size": 900,
+      "overlap": 0,
+      "version": "boundary-v1"
+    },
+    "embedding_input": {
+      "profile": "symmetric",
+      "query_prefix": "",
+      "document_prefix": "",
+      "version": "purpose-v1"
+    }
+  }
+}

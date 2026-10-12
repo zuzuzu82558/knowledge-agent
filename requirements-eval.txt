@@ -1,0 +1,8 @@
+-r requirements.txt
+-c requirements-lock.txt
+ragas==0.2.15
+langchain==0.3.27
+langchain-community==0.3.31
+langchain-openai==0.3.35
+langchain-core==0.3.86
+langchain-text-splitters==0.3.11

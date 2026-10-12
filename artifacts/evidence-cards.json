@@ -1,0 +1,274 @@
+[
+  {
+    "question": "星河产品为何受云晶停产影响？",
+    "reference": "Aurora-X依赖云晶晶圆，停产导致供应中断并影响交付",
+    "minimum_evidence_groups": [
+      [
+        "依赖云晶材料公司供应的晶圆",
+        "因洪水停产两周",
+        "供应中断影响 Aurora-X 芯片交付"
+      ]
+    ],
+    "alternative_groups": [],
+    "locations": [
+      [
+        {
+          "line_start": 15,
+          "line_end": 15
+        }
+      ],
+      [
+        {
+          "line_start": 11,
+          "line_end": 11
+        }
+      ],
+      [
+        {
+          "line_start": 19,
+          "line_end": 19
+        }
+      ],
+      [
+        {
+          "line_start": 45,
+          "line_end": 45
+        }
+      ],
+      [
+        {
+          "line_start": 29,
+          "line_end": 29
+        }
+      ],
+      [
+        {
+          "line_start": 17,
+          "line_end": 17
+        }
+      ],
+      [
+        {
+          "line_start": 5,
+          "line_end": 5
+        }
+      ],
+      [
+        {
+          "line_start": 27,
+          "line_end": 27
+        }
+      ]
+    ],
+    "baseline_mode": "offline_sparse_only",
+    "actual_metrics": {
+      "candidate_evidence_recall": 1.0,
+      "context_evidence_recall": 1.0,
+      "all_necessary_evidence": true
+    },
+    "baseline_omission": "none",
+    "relationship_path": "source evidence only; real extraction and dense comparison pending",
+    "run_id": "37ed57c1-231c-459c-8b0a-af274f050c31",
+    "generation": [
+      "b40566e8-5cad-590f-810e-625e08edca50"
+    ],
+    "human_review": "pending",
+    "source_sha256": "906d447908d43c1ea2e6e207f6deeb1a0385a872c22865d1a145250cf6ab2282"
+  },
+  {
+    "question": "停产与交付延期分别持续多久？",
+    "reference": "停产两周，延期三周",
+    "minimum_evidence_groups": [
+      [
+        "停产两周",
+        "交付延期三周"
+      ]
+    ],
+    "alternative_groups": [],
+    "locations": [
+      [
+        {
+          "line_start": 19,
+          "line_end": 19
+        }
+      ],
+      [
+        {
+          "line_start": 15,
+          "line_end": 15
+        }
+      ],
+      [
+        {
+          "line_start": 17,
+          "line_end": 17
+        }
+      ],
+      [
+        {
+          "line_start": 9,
+          "line_end": 9
+        }
+      ],
+      [
+        {
+          "line_start": 41,
+          "line_end": 41
+        }
+      ],
+      [
+        {
+          "line_start": 35,
+          "line_end": 35
+        }
+      ],
+      [
+        {
+          "line_start": 5,
+          "line_end": 5
+        }
+      ]
+    ],
+    "baseline_mode": "offline_sparse_only",
+    "actual_metrics": {
+      "candidate_evidence_recall": 1.0,
+      "context_evidence_recall": 1.0,
+      "all_necessary_evidence": true
+    },
+    "baseline_omission": "none",
+    "relationship_path": "source evidence only; real extraction and dense comparison pending",
+    "run_id": "1b63e0ff-2426-43d6-914d-71ae5ae91d5b",
+    "generation": [
+      "b40566e8-5cad-590f-810e-625e08edca50"
+    ],
+    "human_review": "pending",
+    "source_sha256": "906d447908d43c1ea2e6e207f6deeb1a0385a872c22865d1a145250cf6ab2282"
+  },
+  {
+    "question": "第二供应商认证是否已消除单一来源风险？",
+    "reference": "不能据此认为消除，认证尚未完成",
+    "minimum_evidence_groups": [
+      [
+        "唯一供应商",
+        "认证尚未完成"
+      ]
+    ],
+    "alternative_groups": [],
+    "locations": [
+      [
+        {
+          "line_start": 33,
+          "line_end": 33
+        }
+      ],
+      [
+        {
+          "line_start": 13,
+          "line_end": 13
+        }
+      ],
+      [
+        {
+          "line_start": 31,
+          "line_end": 31
+        }
+      ],
+      [
+        {
+          "line_start": 11,
+          "line_end": 11
+        }
+      ]
+    ],
+    "baseline_mode": "offline_sparse_only",
+    "actual_metrics": {
+      "candidate_evidence_recall": 1.0,
+      "context_evidence_recall": 1.0,
+      "all_necessary_evidence": true
+    },
+    "baseline_omission": "none",
+    "relationship_path": "source evidence only; real extraction and dense comparison pending",
+    "run_id": "d943373f-c3a9-4f1c-a28b-feed26c5c22c",
+    "generation": [
+      "b40566e8-5cad-590f-810e-625e08edca50"
+    ],
+    "human_review": "pending",
+    "source_sha256": "906d447908d43c1ea2e6e207f6deeb1a0385a872c22865d1a145250cf6ab2282"
+  },
+  {
+    "question": "2024和2025收入口径是否一致？",
+    "reference": "均为全年合并口径历史数据",
+    "minimum_evidence_groups": [
+      [
+        "2025年收入为120",
+        "2024年收入为100",
+        "均为全年合并口径历史数据"
+      ]
+    ],
+    "alternative_groups": [],
+    "locations": [
+      [
+        {
+          "line_start": 23,
+          "line_end": 23
+        }
+      ],
+      [
+        {
+          "line_start": 25,
+          "line_end": 25
+        }
+      ],
+      [
+        {
+          "line_start": 45,
+          "line_end": 45
+        }
+      ],
+      [
+        {
+          "line_start": 37,
+          "line_end": 37
+        }
+      ],
+      [
+        {
+          "line_start": 21,
+          "line_end": 21
+        }
+      ],
+      [
+        {
+          "line_start": 39,
+          "line_end": 39
+        }
+      ],
+      [
+        {
+          "line_start": 33,
+          "line_end": 33
+        }
+      ],
+      [
+        {
+          "line_start": 15,
+          "line_end": 15
+        }
+      ]
+    ],
+    "baseline_mode": "offline_sparse_only",
+    "actual_metrics": {
+      "candidate_evidence_recall": 1.0,
+      "context_evidence_recall": 1.0,
+      "all_necessary_evidence": true
+    },
+    "baseline_omission": "none",
+    "relationship_path": "source evidence only; real extraction and dense comparison pending",
+    "run_id": "6d19085a-2da3-4dff-a882-91122fa97a0c",
+    "generation": [
+      "b40566e8-5cad-590f-810e-625e08edca50"
+    ],
+    "human_review": "pending",
+    "source_sha256": "906d447908d43c1ea2e6e207f6deeb1a0385a872c22865d1a145250cf6ab2282"
+  }
+]

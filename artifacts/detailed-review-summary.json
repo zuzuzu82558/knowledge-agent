@@ -1,0 +1,46 @@
+{
+  "review_date": "2026-10-11",
+  "pytest": {
+    "tests": "142",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "72.776",
+    "timestamp": "2026-10-11T20:15:42.949635+08:00"
+  },
+  "before_fix_reproductions": {
+    "tests": "8",
+    "failures": "8"
+  },
+  "browser": {
+    "status": "passed",
+    "checks": 24,
+    "errors": [],
+    "fixture": "isolated_offline_HTTP_plus_explicit_UI_fixtures"
+  },
+  "http": {
+    "status": "passed",
+    "checks": 8
+  },
+  "online_replay": {
+    "offline_extracts": 6,
+    "not_run_offline": 3
+  },
+  "application_source_sha256": "83abab94438f23c980eef5bc174b2394ea5fd3fef49e1b043e6efbcf64fbdbb5",
+  "frontend_sha256": {
+    "app\\static\\app.js": "827ce9c071e2421214020ca517cd46e0e22bf18f49a41eb8e3cd3536ffdd498b",
+    "app\\static\\evidence.html": "b00d31c730fa017c4fd7b945c7ef721e2760320f765bb737fb8cb5b82f360554",
+    "app\\static\\evidence.js": "ebb596a6cbf4cb9cc0bb960ed517bbdbb9ce61f3ba52facaddaafbaf099d942d",
+    "app\\static\\index.html": "c99e7c132059f37161b88b294540c590c7c38bb8339f32d4993c2b36d0f02c81",
+    "app\\static\\style.css": "74ca139d9a9409f05339f465476241112b8c496c9fe9f2c4c3aa7a469cabd637"
+  },
+  "business_service_probe": {
+    "url": "http://127.0.0.1:8000/api/health",
+    "result": "connection_refused_WinError_10061",
+    "action": "read_only_probe"
+  },
+  "business_data_modified": false,
+  "external_paid_calls": 0,
+  "real_quality_validated": false,
+  "independent_human_semantic_review": "pending"
+}

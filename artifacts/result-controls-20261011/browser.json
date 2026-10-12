@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "long actual sources show bounded previews by default",
+    "click and keyboard toggle preserve full source",
+    "expand all and collapse all",
+    "copy retains full sources while previews collapsed",
+    "expanded citation still opens source panel",
+    "one click clears displayed result, trace, source panel and URL, preserves selection",
+    "cleared run remains recoverable from history",
+    "reload respects cleared display and retained selection",
+    "late in-flight query does not restore cleared result",
+    "390px controls and clear action remain usable"
+  ],
+  "errors": [],
+  "status": "passed"
+}

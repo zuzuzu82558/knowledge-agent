@@ -1,0 +1,110 @@
+{
+  "mode": "offline",
+  "threshold": 0.98,
+  "samples": 12,
+  "rows": [
+    {
+      "a": "星河2025年收入是多少？",
+      "b": "星河2025年收入是多少?",
+      "reusable": true,
+      "guard_allows": true,
+      "similarity": null,
+      "accepted": null
+    },
+    {
+      "a": "Aurora-X功耗是多少？",
+      "b": "Aurora-X功耗是多少",
+      "reusable": true,
+      "guard_allows": true,
+      "similarity": null,
+      "accepted": null
+    },
+    {
+      "a": "星河收入是多少",
+      "b": "星河收入 是多少",
+      "reusable": true,
+      "guard_allows": true,
+      "similarity": null,
+      "accepted": null
+    },
+    {
+      "a": "收入是否为120亿元？",
+      "b": "收入是否为120亿元?",
+      "reusable": true,
+      "guard_allows": true,
+      "similarity": null,
+      "accepted": null
+    },
+    {
+      "a": "星河2025年收入是多少",
+      "b": "星河2024年收入是多少",
+      "reusable": false,
+      "guard_allows": false,
+      "similarity": null,
+      "accepted": null
+    },
+    {
+      "a": "星河收入是多少",
+      "b": "北辰收入是多少",
+      "reusable": false,
+      "guard_allows": false,
+      "similarity": null,
+      "accepted": null
+    },
+    {
+      "a": "收入是否增长",
+      "b": "收入是否没有增长",
+      "reusable": false,
+      "guard_allows": false,
+      "similarity": null,
+      "accepted": null
+    },
+    {
+      "a": "星河比北辰收入高吗",
+      "b": "北辰比星河收入高吗",
+      "reusable": false,
+      "guard_allows": false,
+      "similarity": null,
+      "accepted": null
+    },
+    {
+      "a": "收入120亿元吗",
+      "b": "收入120万元吗",
+      "reusable": false,
+      "guard_allows": false,
+      "similarity": null,
+      "accepted": null
+    },
+    {
+      "a": "全年收入是多少",
+      "b": "第三季度收入是多少",
+      "reusable": false,
+      "guard_allows": false,
+      "similarity": null,
+      "accepted": null
+    },
+    {
+      "a": "实际收入是多少",
+      "b": "预测收入是多少",
+      "reusable": false,
+      "guard_allows": false,
+      "similarity": null,
+      "accepted": null
+    },
+    {
+      "a": "收入是否低于100亿元",
+      "b": "收入是否高于100亿元",
+      "reusable": false,
+      "guard_allows": false,
+      "similarity": null,
+      "accepted": null
+    }
+  ],
+  "actual_embedding": false,
+  "false_accepts": null,
+  "coverage": null,
+  "guard_false_allows": 0,
+  "elapsed_ms": 672,
+  "usage": [],
+  "net_cost_or_latency_benefit": "not_measured"
+}
