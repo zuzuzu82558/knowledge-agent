@@ -6,8 +6,10 @@
 
 ## 修复状态（2026-10-21 更新）
 
-- R1、R2 已在分支 `fix/active-version-publish-r1-r2` 修复：`documents` 新增 `target` 列记录最近一次显式发布意图（新文档、显式更新、重建）；摄入完成时仅在 `target` 等于本代次时才条件更新 `active`。普通去重上传不再改动已有文档的活动版本，过期失败任务重试后只修复自身索引代次，任务标记为 `completed/superseded`，不回退较新版本。回归测试见 `tests/test_active_version_publish.py`。`artifacts/review-20261012/test_review_probes.py` 中对应的两个缺陷复现现在按预期失败（缺陷不再存在）。
-- R3、R4 仍未修复。
+- R1、R2 已通过 PR #1 修复并合并：`documents` 新增 `target` 列记录最近一次显式发布意图（新文档、显式更新、重建）；摄入完成时仅在 `target` 等于本代次时才条件更新 `active`。普通去重上传不再改动已有文档的活动版本，过期失败任务重试后只修复自身索引代次，任务标记为 `completed/superseded`，不回退较新版本。回归测试见 `tests/test_active_version_publish.py`。`artifacts/review-20261012/test_review_probes.py` 中对应的两个缺陷复现现在按预期失败（缺陷不再存在）。
+- R3 已修复：混合来源时，`select_context` 为每种来源预留排名靠前的少量候选（`top_k // (2 × 来源数)`，默认每类 2 条），并在分配平均份额前扣除这些预留候选的最小证据字节；单一来源时行为不变。审计字段 `allocation` 标记为 `source_reserved_equal_shares_v2`。
+- R4 已修复：全文洞察按块向进度对象提交结果；超时时返回截止前完成的章节、证据、引用和 `coverage.interrupted=true`，进行中的章节标记为 `interrupted`，未完成块不计入覆盖；结果同时写入历史记录。
+- R3、R4 回归测试见 `tests/test_evidence_budget_and_summary_timeout.py`。原 R4 缺陷探针因替换了 `insights` 且未透传新增参数而失败，不能单独作为修复证明，以新回归测试为准。
 
 ## 已确认问题
 
