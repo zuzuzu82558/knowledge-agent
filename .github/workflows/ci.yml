@@ -1,5 +1,7 @@
 name: M1-M5 offline contracts
 on: [push, pull_request]
+permissions:
+  contents: read
 jobs:
   test:
     strategy:
