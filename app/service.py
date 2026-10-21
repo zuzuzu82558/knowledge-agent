@@ -101,6 +101,7 @@ class Service:
             if sum(not t.done() for t in self.tasks) >= 8:
                 raise HTTPException(429, '摄入队列已满，请稍后重试')
             sha = hashlib.sha256(content).hexdigest()
+            explicit = bool(document)
             if document:
                 doc = st.one('SELECT * FROM documents WHERE id=? AND deleted=0', (document,))
                 if not doc:
@@ -126,15 +127,26 @@ class Service:
                 generation = str(uuid.uuid4())
             st.execute('INSERT OR IGNORE INTO generations(id,version,config,contract,parse_status,vector_status) VALUES (?,?,?,?,?,?)',
                        (generation, version, self.s.fingerprint, json.dumps(self.s.contract), 'pending', 'pending'))
+            current = st.one('SELECT active,target FROM documents WHERE id=?', (document,))
+            # A plain (non-explicit) upload that matches content already known for an existing
+            # document is deduplicated only: it must not switch that document's active version
+            # or its publish target. Explicit updates (document_id given) and brand-new documents
+            # express publish intent. (R1)
+            publishes = explicit or not (current and (current['active'] or current['target']))
+            if publishes:
+                st.execute('UPDATE documents SET target=? WHERE id=?', (generation, document))
             existing = st.one("SELECT * FROM jobs WHERE generation=? AND status IN ('queued','running','completed') ORDER BY rowid DESC LIMIT 1", (generation,))
             if existing:
-                if existing['status'] == 'completed':
+                if existing['status'] == 'completed' and publishes:
                     st.execute('UPDATE documents SET active=? WHERE id=?', (generation, document))
-                return {'document_id': document, 'version_id': version, 'generation_id': generation, 'job_id': existing['id'], 'idempotent': True}
+                active = st.one('SELECT active FROM documents WHERE id=?', (document,))['active']
+                return {'document_id': document, 'version_id': version, 'generation_id': generation, 'job_id': existing['id'],
+                        'idempotent': True, 'active': active == generation}
             job = str(uuid.uuid4())
             st.execute('INSERT INTO jobs VALUES (?,?,?,?,?)', (job, generation, 'queued', 'queued', None))
             self.launch(job)
-            return {'document_id': document, 'version_id': version, 'generation_id': generation, 'job_id': job, 'idempotent': False}
+            return {'document_id': document, 'version_id': version, 'generation_id': generation, 'job_id': job,
+                    'idempotent': False, 'active': False}
 
     async def parse(self, record):
         output = self.s.data_dir / 'files' / (record['generation'] + '.parsed.json')
@@ -197,14 +209,20 @@ class Service:
                 async with self.observer.stage('index',job_id=job,generation=gen):
                     await asyncio.to_thread(self.index.upsert, chunks, vectors, vocab, gen)
                 st.execute("UPDATE generations SET vector_status='ready' WHERE id=?", (gen,))
-                st.execute('UPDATE documents SET active=? WHERE id=?', (gen, rec['document']))
+                # Conditional publish: only the document's current publish target may become
+                # active. A retried, superseded job still repairs its own index generation but
+                # never rolls back a newer published version. (R2)
+                published = st.execute('UPDATE documents SET active=? WHERE id=? AND (target=? OR target IS NULL)',
+                                       (gen, rec['document'], gen)).rowcount
+                if not published:
+                    st.event('ingest_superseded', job_id=job, generation=gen)
                 st.execute("UPDATE generations SET graph_status='not_built',summary_status='not_built' WHERE id=?", (gen,))
                 if self.s.graph_enabled and self.s.app_mode != 'offline':
                     async with self.observer.stage('graph_extract',job_id=job,generation=gen):
                         graph_model = self.models('background')
                         await self._build_graph(gen, chunks, graph_model)
                         model.usage.extend(graph_model.usage)
-                st.execute("UPDATE jobs SET status='completed',stage='ready' WHERE id=?", (job,))
+                st.execute("UPDATE jobs SET status='completed',stage=? WHERE id=?", ('ready' if published else 'superseded', job))
                 await self.observer.record('ingest_complete', job_id=job, generation=gen, chunks=len(chunks),
                          elapsed_ms=round((time.monotonic()-started)*1000), usage=model.usage)
             except asyncio.CancelledError:
@@ -254,6 +272,7 @@ class Service:
                        (generation, row['version'], self.s.fingerprint, json.dumps(self.s.contract), 'pending', 'pending'))
             if st.one("SELECT id FROM jobs WHERE generation=? AND status IN ('queued','running')", (generation,)):
                 raise HTTPException(409, 'job_already_running')
+            st.execute('UPDATE documents SET target=? WHERE id=?', (generation, document))
             job = str(uuid.uuid4())
             st.execute('INSERT INTO jobs VALUES (?,?,?,?,?)', (job, generation, 'queued', 'rebuild', None))
             self.launch(job)
@@ -264,7 +283,7 @@ class Service:
             st = self.store
             if not st.one('SELECT id FROM documents WHERE id=?', (document,)):
                 raise HTTPException(404, 'document_not_found')
-            st.execute("UPDATE documents SET deleted=1,active=NULL,cleanup_status='pending' WHERE id=?", (document,))
+            st.execute("UPDATE documents SET deleted=1,active=NULL,target=NULL,cleanup_status='pending' WHERE id=?", (document,))
             st.bump()
             await self.cache.invalidate()
             generations = st.all('SELECT g.* FROM generations g JOIN versions v ON v.id=g.version WHERE v.document=?', (document,))
