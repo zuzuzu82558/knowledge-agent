@@ -15,7 +15,7 @@ from .context import select_context
 from .retrieval import Index, tokenize
 from .storage import Store
 from .graph import Graph, validate_facts
-from .insights import insights
+from .insights import insights, interrupted_summary
 from .cache import AnswerCache, namespace
 from .observability import Observer
 
@@ -496,14 +496,14 @@ class Service:
             if use_cache:
                 hit = await cached()
                 if hit: return hit
-            candidates, online = [], None
+            candidates, online, summary_progress = [], None, {}
             try:
                 self.progress(progress_id,'retrieve_local')
                 result['route'] = actual_route
                 result['strategy'] = strategy
                 if actual_route == 'summary':
                     async with self.observer.stage('summary',run_id=run):
-                        result.update(await insights(self, snapshot['generations'], model))
+                        result.update(await insights(self, snapshot['generations'], model, progress=summary_progress))
                     result['steps'] = ['固定快照','遍历全部章节与原文块','带原文引用的章节摘要','去重聚合（不跨口径相加）']
                     result['fallback_used'] = bool(self.s.fallback_model) and any(
                         e.get('status') == 'success' and e.get('model') == self.s.fallback_model
@@ -647,6 +647,12 @@ class Service:
                 if online is not None: candidates = online.candidate_pool()
                 if candidates:
                     result['evidence'],result['context']=select_context(candidates,question,self.s.evidence_bytes,self.s.retrieval_top_k,balanced=scope!='documents')
+                # Full-document insights keep sections finished before the deadline;
+                # unfinished chunks are never counted as covered.
+                partial = interrupted_summary(summary_progress)
+                if partial and (partial['claims'] or partial['evidence']):
+                    result.update(partial)
+                    result['warnings'].append('summary_interrupted:已返回截止前完成的章节摘要，覆盖不完整。')
             except Exception as exc:
                 result['status'] = 'retrieval_failed'
                 result['warnings'].append(type(exc).__name__)

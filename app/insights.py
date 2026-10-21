@@ -5,7 +5,10 @@ import json
 from .context import select_context
 
 
-async def insights(service, generations, model):
+async def insights(service, generations, model, progress=None):
+    """Summarize every chunk. ``progress`` (optional dict) is updated in place as
+    chunks finish, so a caller interrupted by its deadline can still return the
+    sections, claims and evidence completed so far."""
     st = service.store
     rows = st.all('SELECT body FROM chunks WHERE generation IN ('+','.join('?' for _ in generations)+') ORDER BY rowid', generations)
     chunks = [json.loads(r['body']) for r in rows]
@@ -13,8 +16,14 @@ async def insights(service, generations, model):
     for c in chunks:
         groups.setdefault((c['generation'], tuple(c['headings'])), []).append(c)
     sections, all_evidence = [], {}
+    if progress is not None:
+        progress.update(sections=sections, evidence=all_evidence, current=None,
+                        total_sections=len(groups), total_chunks=len(chunks))
     for (generation, headings), source in groups.items():
         claims, failed, covered = [], [], []
+        if progress is not None:
+            progress['current'] = {'generation':generation, 'headings':list(headings), 'claims':claims,
+                                   'covered_chunks':covered, 'failed':failed, 'total_chunks':len(source)}
         # Each source chunk is visited even when it would never be in top-k.
         for c in source:
             key = hashlib.sha256(json.dumps([c['id'], service.s.llm_model,
@@ -49,6 +58,8 @@ async def insights(service, generations, model):
         sections.append({'generation':generation, 'headings':list(headings), 'claims':claims,
                          'covered_chunks':covered, 'failed':failed, 'total_chunks':len(source),
                          'status':'partial' if failed else ('offline_extracts' if service.s.app_mode=='offline' else 'ready')})
+        if progress is not None:
+            progress['current'] = None
     complete = sum(not s['failed'] for s in sections)
     union=list({json.dumps(c,sort_keys=True,ensure_ascii=False):c for s in sections for c in s['claims']}.values())
     aggregate={'core_viewpoints':[],'risk_points':[],'key_data':[],'status':'not_run_offline' if service.s.app_mode=='offline' else 'not_run_no_claims'}
@@ -82,6 +93,8 @@ async def insights(service, generations, model):
                 aggregate={**mapped,'status':'ready'}
             except Exception as exc:
                 aggregate['status']='failed_section_union_retained';aggregate['error']=type(exc).__name__
+    if progress is not None:
+        progress['aggregating'] = True
     for gen in generations:
         relevant = [s for s in sections if s['generation']==gen]
         st.execute('UPDATE generations SET summary_status=? WHERE id=?',
@@ -91,3 +104,28 @@ async def insights(service, generations, model):
             'claims':union,'insights':aggregate, 'coverage_basis':'parsed_chunks_not_original_document_completeness',
             'evidence':list(all_evidence.values()), 'status':'offline_extracts' if service.s.app_mode=='offline' else 'partial_summary' if complete<len(sections) or (union and aggregate['status']!='ready') else 'summarized',
             'aggregation':'cited_section_union_with_validated_optional_global_insights'}
+
+
+def interrupted_summary(progress):
+    """Build a partial result from ``progress`` after a deadline cancelled insights.
+
+    Only fully finished sections count as complete; the section in flight is
+    reported as ``interrupted`` with the chunks it had already covered.
+    """
+    if not progress or 'sections' not in progress:
+        return None
+    sections = [dict(s) for s in progress['sections']]
+    current = progress.get('current')
+    if current is not None and (current['covered_chunks'] or current['failed']):
+        sections.append({**current, 'claims':list(current['claims']), 'covered_chunks':list(current['covered_chunks']),
+                         'failed':list(current['failed']) + [{'chunk':None, 'reason':'request_timeout'}],
+                         'status':'interrupted'})
+    claims = list({json.dumps(c, sort_keys=True, ensure_ascii=False): c for s in sections for c in s['claims']}.values())
+    complete = sum(not s['failed'] for s in sections)
+    return {'sections':sections, 'claims':claims, 'evidence':list(progress['evidence'].values()),
+            'coverage':{'total_sections':progress['total_sections'], 'complete_sections':complete,
+                        'total_chunks':progress['total_chunks'],
+                        'visited_chunks':sum(len(s['covered_chunks']) for s in sections), 'interrupted':True},
+            'coverage_basis':'parsed_chunks_not_original_document_completeness',
+            'insights':{'core_viewpoints':[], 'risk_points':[], 'key_data':[], 'status':'not_run_interrupted'},
+            'aggregation':'interrupted_partial_section_union'}
