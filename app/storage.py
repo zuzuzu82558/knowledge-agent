@@ -30,6 +30,10 @@ class Store:
         self._migrate_generations()
         if 'cleanup_status' not in {r['name'] for r in self.db.execute('PRAGMA table_info(documents)')}:
             self.execute("ALTER TABLE documents ADD COLUMN cleanup_status TEXT DEFAULT 'none'")
+        if 'target' not in {r['name'] for r in self.db.execute('PRAGMA table_info(documents)')}:
+            # Latest generation the user explicitly asked to publish (upload, update, rebuild).
+            # Only that generation may become active when its job completes.
+            self.execute('ALTER TABLE documents ADD COLUMN target TEXT')
         self.execute("UPDATE jobs SET status='interrupted',error='process_restarted_retry_required' WHERE status IN ('queued','running')")
         self.execute("UPDATE generations SET vector_status='interrupted' WHERE vector_status='building'")
 

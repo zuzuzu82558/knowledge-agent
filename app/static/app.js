@@ -171,7 +171,7 @@ $('upload').onsubmit=async e=>{
     const data=new FormData();data.append('file',file);if($('version').value)data.append('document_id',$('version').value);
     const r=await api('/api/documents',{method:'POST',body:data});
     $('file').value='';$('uploadDialog').close();
-    notice(r.idempotent?'文件已存在，复用已有版本。请勾选已就绪文档后提问。':'上传成功，处理完成后请勾选文档并提问。');
+    notice(r.idempotent?(r.active===false&&!data.get('document_id')?'该内容是已有文档的历史版本，当前版本保持不变；如需切换，请在该文档上执行“更新”。':'文件已存在，复用已有版本。请勾选已就绪文档后提问。'):'上传成功，处理完成后请勾选文档并提问。');
     await refresh();
   }catch(err){report(err);}finally{setUploadBusy(false);}
 };
