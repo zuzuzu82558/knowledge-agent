@@ -1,5 +1,8 @@
 # Knowledge Agent
 
+[![CI](https://github.com/zuzuzu82558/knowledge-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/zuzuzu82558/knowledge-agent/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 可追溯、可评测的文档 RAG，支持联网搜索和在线证据补充。FastAPI + 原生前端，默认离线只显示原文摘录。新增三种资料范围、冻结网页快照、固定联网基线与模型选择工具的受控 Agent。升级说明及验收状态见 [RAG_UPGRADE](docs/RAG_UPGRADE_20261011.md)，架构见 [ARCHITECTURE](docs/ARCHITECTURE.md)，30题来源复核见 [GOLDEN_REVIEW](docs/GOLDEN_REVIEW_20261011.md)。
 
 **本地功能和接口契约已验证；真实模型、托管服务、独立人工效果验收仍待完成。没有真实 GraphRAG 增益或 RAGAS 分数。**
@@ -123,3 +126,7 @@ SQLite新增处理检查点与网页快照表，保留历史ID和业务数据。
 本机无认证/多租户/高可用，摄入和问答串行。默认20MB上传；Office解压100MB/5000项，300页或幻灯片、30工作表、20000行、200列、200万抽取字符，解析60秒；无OS内存配额。上下文预算为保守UTF-8字节，非模型精确token计数。引用和quote校验只证明来源范围，不证明语义正确。详细数据边界、删除残留及已知限制见 [DELIVERY](docs/DELIVERY.md)。
 
 修复与验证记录见 [ACCEPTANCE_FIXES](docs/ACCEPTANCE_FIXES.md)。界面提供最近问答恢复、可读原文记录、版本原文件下载和任务失败恢复提示。评测的 `candidate_anchor_recall/context_anchor_recall/all_required_anchors_present` 仅表示文字锚点匹配，`semantic_support=not_judged`，不能视为语义证据充分；黄金集已改为较完整的来源段落锚点，仍待人工复核。
+
+## 参与贡献与许可证
+
+欢迎提交 Issue 和 PR，开发流程见 [CONTRIBUTING.md](CONTRIBUTING.md)，安全问题请按 [SECURITY.md](SECURITY.md) 私下报告。本项目基于 [MIT 许可证](LICENSE) 开源。
