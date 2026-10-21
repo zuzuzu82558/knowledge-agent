@@ -1,0 +1,37 @@
+name: 问题报告
+description: 报告一个可复现的缺陷
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 问题描述
+      description: 发生了什么？与预期有什么不同？
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+  - type: input
+    id: env
+    attributes:
+      label: 运行环境
+      placeholder: 操作系统 / Python 版本 / 提交或版本号
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志或截图
+      description: 请先删除其中的 API Key、令牌等敏感信息。
+      render: text
