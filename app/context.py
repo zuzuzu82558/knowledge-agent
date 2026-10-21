@@ -44,19 +44,60 @@ def _excerpt_window(text, question):
     return lower, anchor + match_length
 
 
+def _minimum_cost(candidate, question):
+    """Bytes needed by the smallest legal excerpt of one candidate, metadata included."""
+    evidence = dict(candidate)
+    text = evidence['text']
+    start, required_end = _excerpt_window(text, question)
+    minimum = max(min(24, len(text) - start), required_end - start)
+    evidence['text'] = text[start:start + minimum]
+    return context_cost([evidence])
+
+
+def _source_reservations(candidates, question, top_k):
+    """Reserve the first few ranked candidates of each source when sources are mixed.
+
+    Metadata size differs a lot between sources (web pages carry title/URL/time),
+    so equal byte shares alone could silently exclude a whole source. Returns
+    {position: minimum_cost} for reserved candidates.
+    """
+    sources = {}
+    for position, candidate in enumerate(candidates):
+        sources.setdefault(candidate.get('source_type', 'document'), []).append(position)
+    if top_k is None or len(sources) < 2:
+        return {}
+    quota = max(1, top_k // (2 * len(sources)))
+    return {p: _minimum_cost(candidates[p], question)
+            for positions in sources.values() for p in positions[:quota]}
+
+
 def select_context(candidates, question, budget, top_k=None, balanced=False):
     selected, decisions = [], []
+    reserved = _source_reservations(candidates, question, top_k) if balanced else {}
     for position, candidate in enumerate(candidates):
         evidence = dict(candidate)
         if top_k is not None and len(selected) >= top_k:
             decisions.append({'id': evidence['id'], 'selection': 'final_top_k', 'reason': 'final_evidence_limit'})
+            continue
+        pending = [p for p in reserved if p > position]
+        if position not in reserved and top_k is not None and len(selected) + len(pending) >= top_k:
+            decisions.append({'id': evidence['id'], 'selection': 'final_top_k', 'reason': 'source_reservation'})
             continue
         used = context_cost(selected)
         slots = min(len(candidates)-position, (top_k-len(selected)) if top_k is not None else len(candidates))
         # Online pages can be much longer than local chunks. Reserve a share
         # for remaining candidates; unused space rolls forward. Metadata and
         # text are measured together, with the unchanged total byte guard.
-        limit = used + max(0, budget-used)//max(1,slots) if balanced else budget
+        # Bytes still owed to later reserved candidates are kept aside so a
+        # mixed query keeps usable evidence from every source.
+        available = max(0, budget - used - sum(reserved[p] for p in pending))
+        if balanced:
+            share = available // max(1, slots)
+            if position in reserved:
+                share = min(max(share, reserved[position]), available)
+            limit = used + share
+        else:
+            limit = budget
         allocation = {'allocation_bytes':max(0,limit-used)} if balanced else {}
         if context_cost(selected + [evidence]) <= limit:
             selected.append(evidence)
@@ -88,5 +129,5 @@ def select_context(candidates, question, budget, top_k=None, balanced=False):
     state = 'selected' if selected else ('budget_exceeded' if candidates else 'no_candidates')
     return selected, {'status': state, 'unit': 'UTF8_bytes', 'budget': budget, 'used': context_cost(selected),
                       'candidate_count': len(candidates), 'decisions': decisions,
-                      'allocation': 'remaining_candidates_equal_shares_v1' if balanced else 'rank_order_greedy_v1',
+                      'allocation': ('source_reserved_equal_shares_v2' if reserved else 'remaining_candidates_equal_shares_v1') if balanced else 'rank_order_greedy_v1',
                       'method': 'model_evidence_JSON_UTF8_bytes_v2'}
